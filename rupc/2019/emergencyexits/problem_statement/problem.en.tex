@@ -1,0 +1,45 @@
+\problemname{Emergency Exits}
+
+\illustration{0.4}{exit}{An emergency exit.}%
+The university is set to undergo a comprehensive quality inspection next month.
+The set of requirements that will be checked are known in advance, and the
+university has been going through the list, making sure everything is in order.
+
+Under the ``Fire Safety'' section there is a requirement concerning emergency
+exits that they are having a hard time assessing. It states that it must be
+possible to reach an emergency exit from any location within the university
+building in a reasonable time.
+
+You have been asked to help with assessing the current state of these emergency
+exits. The university has provided you with a graph representation of the
+building, where each location in the building is represented as a vertex, and
+each pathway is represented as a weighted directed edge from one
+location to another. The weight of an edge represents the time in seconds
+required to travel along that pathway. Note that each pathway can only be
+traveled in one direction.
+
+Given at which locations an emergency exit is present, determine the maximum
+time required to reach the closest emergency exit from any location in the
+building.
+
+\section*{Input}
+The input consists of:
+\begin{itemize}
+    \item One line with three integers $n$, $m$ and $k$ ($1 \le k \le n \le 2\cdot
+    10^5$, $0 \le m \le 2\cdot 10^5$), the number of locations, pathways and
+    emergency exits.
+    \item One line with $k$ integers, the distinct locations of the emergency
+    exits.
+    \item $m$ lines, the $i$th of which contains three integers $u_i$, $v_i$ and
+    $s_i$ ($1 \le u_i,v_i \le n$, $0 \le s_i \le 10^6$, $u_i \neq v_i$),
+    representing a unidirectional pathway from location $u_i$ to location $v_i$
+    that takes $s_i$ seconds to travel along.
+\end{itemize}
+
+No two pathways have the same source and destination.
+
+\section*{Output}
+Output the minimum time, in seconds, required to reach the closest emergency exit
+from any location in the building. If it is not possible to reach an emergency
+exit from all locations in the building, output ``\texttt{danger}''.
+

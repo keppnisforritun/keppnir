@@ -1,0 +1,67 @@
+\problemname{Fetch the Stuff}
+
+\illustration{0.4}{door}{A locked door.}%
+It is getting late, and after a long day of studying, Hannes is ready to head
+home. But now he realizes that he forgot his backpack in one of the classrooms,
+and his jacket is still in the student lounge. This wouldn't be such a big deal
+if it were not for the fact that some of the doors in the university building
+will automatically become locked when it is late in the evening. While
+Hannes will be able to exit through a locked door, the door will immediately
+slam shut behind him, at which point he will not be able to go back
+through.
+
+Hannes now wonders if he will be able to fetch all his stuff, and then exit the
+building. Given a description of the $n$ parts of the university, the $m$ open
+and locked doors that separate these parts, as well as the $k$ different
+parts that Hannes needs to visit to fetch his stuff, can you help him
+determine if he can fetch all his stuff and then exit the building?
+
+Hannes' current location is in part $1$, and outside the building is
+represented as part $n$.
+
+\section*{Input}
+The input consists of:
+\begin{itemize}
+    \item One line with three integers $n$, $m$ and $k$ ($3 \le n \le 5\,000$, $1
+    \le m \le 10^5$, $1 \le k \le 30$), the number of parts of the building,
+    open and locked doors that separate them, and parts that Hannes needs to
+    visit in order to fetch his stuff.
+    \item One line with $k$ distinct integers $p_1,\ldots,p_k$ ($1 < p_i < n$),
+    the parts that Hannes needs to visit in order to fetch his stuff.
+    \item $m$ lines, describing the doors.
+
+    The $i$th such line starts with two integers $q_i$ and $r_i$ ($1 \le q_i,
+    r_i \le n$, $q_i \neq r_i$), indicating that there is a door that separates
+    parts $q_i$ and $r_i$ of the building.
+
+    The remainder of the line contains a string $s_i$, either ``\texttt{open}''
+    or ``\texttt{locked}'', indicating whether this door is open or locked. If
+    the door is locked, Hannes can only use the door to go from part $q_i$ of
+    the building to part $r_i$ of the building. If the door is open, Hannes can
+    use the door to travel between parts $q_i$ and $r_i$ as he wishes.
+\end{itemize}
+
+\section*{Output}
+If it is possible for Hannes to pick up all his stuff and then exit the
+building, output a sequence $t_1,\ldots,t_l$ of parts that Hannes can visit, in
+the order that he should visit them, so that he can pick up all his stuff. It
+must hold that:
+\begin{itemize}
+    \item He starts at his current location, i.e.\ $t_1 = 1$.
+    \item He ends outside the building, i.e.\ $t_l = n$.
+    \item For any two consecutive parts $t_i$ and $t_{i+1}$ that he visits,
+    there must exist a door that allows Hannes to travel directly from part $t_i$
+    of the building to part $t_{i+1}$ of the building.
+    \item Hannes must visit all the parts he needs to visit in order to fetch
+    all his stuff, i.e.\ for each $i~\in~\{1,\ldots,k\}$ there must exist
+    \emph{at least} one $j\in\{1,\ldots,l\}$ such that $p_i = t_j$.
+\end{itemize}
+
+It is guaranteed that if there exists a valid sequence, there exists a valid
+sequence of length at most $2\cdot 10^5$. Furthermore, your sequence must
+satisfy $l \le 2\cdot 10^5$. If there are multiple valid sequences, you may
+output any of them.
+
+If it is not possible for Hannes to pick up all his stuff and then exit the
+building, output ``\texttt{impossible}''.
+

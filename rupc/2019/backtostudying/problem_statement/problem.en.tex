@@ -1,0 +1,34 @@
+\problemname{Back to Studying}
+
+The semester's final exams are approaching rapidly, but Arnar has yet to
+begin studying. Instead he does what all other Computer Science students do
+when exams are near: play video games all day long!
+
+But now he's starting to get worried that he might not have enough time to
+prepare for all of his exams. He knows the exam schedule, and for each exam he
+knows how many days he must spend studying for the exam in order to pass. He
+can only study for at most one exam per day, and he will not be able to do any
+studying on days when there are exams.
+
+Given this information, help Arnar determine if it is possible for him to study
+enough to pass all his exams, and, in that case, how many additional days he
+can spend playing video games before he has to begin studying.
+
+\section*{Input}
+The input consists of:
+\begin{itemize}
+    \item One line with one integer $n$ ($1 \le n \le 2\cdot 10^5$), the number
+    of Arnar's final exams.
+    \item $n$ lines, the $i$th of which contains two integers $d_i$ and $c_i$ ($1
+    \le d_i, c_i \le 10^9$), the number of days before the $i$th exam and the
+    number of days Arnar must study for this exam in order to pass.
+\end{itemize}
+
+There is at most one exam on any given day.
+
+\section*{Output}
+If there is no way for Arnar to spend the required number of days studying in
+order to pass all his exams, output ``\texttt{impossible}''. Otherwise, output the
+number of days Arnar can spend playing video games before he has to begin
+studying in order to pass all his exams.
+

@@ -1,0 +1,20 @@
+INT(1,360,n) NEWLINE
+
+SET(degsum = 0)
+
+REP(n)
+    INT(1,360,deg) SPACE
+    INT(0,1000,r1) SPACE
+    INT(0,1000,r2) NEWLINE
+
+    ASSERT(r1 <= r2)
+    IF(r1 == r2)
+        ASSERT(r1 == 0)
+        ASSERT(r2 == 0)
+    END
+
+    SET(degsum = degsum + deg)
+END
+
+ASSERT(degsum == 360)
+

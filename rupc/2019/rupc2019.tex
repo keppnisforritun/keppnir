@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt,noproblemids]{problemset}
+
+\usepackage{microtype}
+\usepackage{todonotes}
+\usepackage{enumitem}
+
+\setitemize{itemsep=-2pt,topsep=-2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.075in}
+
+\contestshortname{RUPC 2019}
+% \contestname{Northwestern European\\Regional Contest 2018}
+\contestname{Reykjavík University\\Spring Contest 2019}
+\contestlogo{icpc}
+\location{Reykjavík, May 19}
+
+\begin{document}
+\problemlanguage{.en}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{\textsf{\huge{RUPC 2019}}}
+
+% \begin{titlepage}
+%     \newgeometry{top=6cm}%
+%     \centering%
+%     % \includegraphics[width=0.8\textwidth]{fklogo}\\
+%     \vspace{1cm}%
+%     {\Huge Reykjavík University\\Spring Contest 2019 \par}%
+%     \vspace{0.5cm}%
+%     { \LARGE \textit{RUPC 2019 } \par}%
+%     \vspace{0.5cm}%
+%     {\LARGE Háskólanum í Reykjavík, 18.\ mars \par}%
+%     \vspace{1cm}%
+%     \includegraphics[width=0.2\textwidth]{horizontal_white.png}%
+%     \vspace{1cm}%
+%     % { \Huge \tableofcontents }%
+
+%     \Huge{\contentsname}\\
+%     \vspace{5mm}
+%     \Large
+%     \@starttoc{toc}
+% \end{titlepage}
+
+\import{./}{coverpage}
+\includeproblem{ataleoftwoqueues}
+\includeproblem{backtostudying}
+\includeproblem{circularpainting}
+\includeproblem{dangerzone}
+\includeproblem{emergencyexits}
+\includeproblem{fetchthestuff}
+\includeproblem{grouplockers}
+\includeproblem{hotdogdeals}
+
+\end{document}

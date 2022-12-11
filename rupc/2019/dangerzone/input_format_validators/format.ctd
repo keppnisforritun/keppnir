@@ -1,0 +1,18 @@
+INT(0,5000,n) NEWLINE
+REPI(i,n)
+    INT(-10^9,10^9,x[i]) SPACE
+    INT(40,10^9,y[i]) NEWLINE
+
+    ASSERT(x[i]^2 + y[i]^2 >= 280^2)
+
+    ASSERT((x[i]+40)^2 + y[i]^2 > 240^2)
+    ASSERT((x[i]-40)^2 + y[i]^2 > 240^2)
+    IF(-40 <= x[i] && x[i] <= 40)
+        ASSERT(y[i]^2 > 240^2)
+    END
+
+# Checked in constraints.cpp
+#    REPI(j,i)
+#        ASSERT((x[i]-x[j])^2 + (y[i]-y[j])^2 >= 80^2)
+#    END
+END

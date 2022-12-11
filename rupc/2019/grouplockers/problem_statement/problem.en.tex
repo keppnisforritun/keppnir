@@ -1,0 +1,39 @@
+\problemname{Group Lockers}
+
+\illustration{0.4}{lockers}{A set of lockers.}%
+Sets of lockers can be found at different locations around the university. Each
+set is arranged into columns of equal width, with between one and four lockers
+in each column. At the start of each semester, students get the opportunity to
+rent one of these lockers for the entire semester; this can be very handy for
+students that would otherwise have to carry stacks of books between their
+classes.
+
+Upon hearing this, a group of $n$ friends decides that they each want their own
+locker. None of them have any specific requirements about the size or location
+of their locker, except that --- being such good friends --- they want their
+lockers to be close to each other. In fact, they insist that all of their
+lockers belong to the same set of lockers. Within that set, they want to
+minimize the distance required to walk between the leftmost and rightmost
+lockers that belong to the friends.
+
+Given a candidate set of lockers, and the number of lockers that are available
+for rent in each column, can you help the friends determine this distance if
+they choose their $n$ lockers optimally?
+
+\section*{Input}
+The input consists of:
+\begin{itemize}
+    \item One line with two integers $n$ and $m$ ($1 \le n \le 10^9$, $1 \le m \le
+    5\cdot 10^5$), the number of friends and the number of columns in the
+    candidate set of lockers.
+    \item One line with a string of $m$ digits $c_1c_2\ldots c_m$ ($0 \le c_i
+    \le 4$), where $c_i$ represents the number of available lockers in column
+    $i$.
+\end{itemize}
+
+\section*{Output}
+Output the distance, measured in number of columns, required to walk between
+the leftmost and rightmost lockers that belong to the friends, assuming they
+rent the $n$ lockers that minimize this distance. If it is not possible to rent
+$n$ lockers, output ``\texttt{impossible}''.
+

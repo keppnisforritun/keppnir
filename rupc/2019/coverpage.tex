@@ -1,0 +1,67 @@
+%% Cover page
+
+\makeatletter
+\newcommand{\coverpage}{
+  \thispagestyle{empty}
+  \begin{center}
+    \sf
+    {\Huge
+      \ifx \@contestname \@empty
+      \ifx \@contestshortname \@empty
+      NO CONTEST NAME OR SHORT NAME PROVIDED
+      \else
+      \@contestshortname
+      \fi
+      \else
+      \@contestname
+      \fi
+    }\\
+    \vspace{4mm}
+    %
+    \ifx \@contestname \@empty \relax \else
+    \ifx \@contestshortname \@empty \relax \else
+    {\LARGE \textsl{\@contestshortname}}\\
+    \vspace{5mm}
+    \fi
+    \fi
+    \vspace{5mm}
+    %
+    \ifx \@location \@empty \relax \else
+    {\huge \@location}\\
+    \vspace{4mm}
+    \fi
+    %
+    \ifx \@contestlogo \@empty \relax \else
+    \raisebox{-0.3\height}{\includegraphics[height=5.2cm]{\@contestlogo}}\\
+    \vspace{10mm}
+    \fi
+    %
+    \Huge{\contentsname}\\
+    \vspace{5mm}
+    \Large
+    \@starttoc{toc}
+
+    \vspace{12mm}
+    \raisebox{-0.3\height}{\includegraphics[height=2.7cm]{horizontal_white}\hspace*{2em}}\\
+    \vspace{9mm}
+    {
+      \Large\sf\emph{
+      Do not open before the contest has started.}
+    }
+    \vspace{9mm}
+
+    \vfill
+    % \hfill
+    % \includegraphics[height=1.0cm]{IBM.png}
+    %\hfill
+    %\raisebox{-0.15\height}{\includegraphics[height=1.0cm]{JPMorgan.png}}
+    %\hfill{}
+
+  \end{center}
+
+  \cleardoublepage
+  \setcounter{page}{1}
+}
+\makeatother
+
+\coverpage

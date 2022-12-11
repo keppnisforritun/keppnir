@@ -1,0 +1,16 @@
+INT(1,2*10^5,n) SPACE
+INT(0,2*10^5,m) SPACE
+INT(1,n,k) NEWLINE
+
+REPI(i,k,SPACE) INT(1,n,exit[i]) END NEWLINE
+ASSERT(UNIQUE(exit))
+
+REPI(i,m)
+    INT(1,n,from[i]) SPACE
+    INT(1,n,to[i]) SPACE
+    INT(0,10^6,dist[i]) NEWLINE
+    ASSERT(from[i] != to[i])
+END
+
+ASSERT(UNIQUE(from,to))
+

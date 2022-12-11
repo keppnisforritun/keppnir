@@ -1,0 +1,13 @@
+INT(3,5000,n) SPACE
+INT(1,100000,m) SPACE
+INT(1,30,k) NEWLINE
+REPI(i,k,SPACE)
+    INT(2,n-1,item[i])
+END NEWLINE
+ASSERT(UNIQUE(item))
+REP(m)
+    INT(1,n,from) SPACE
+    INT(1,n,to) SPACE
+    REGEX("(open|locked)") NEWLINE
+    ASSERT(from != to)
+END
