@@ -1,0 +1,36 @@
+\problemname{Eindahraðall}
+
+Verið er að setja upp eindahraðal á Íslandi.
+Hraðallinn er $N$ Planck lengdir að lengd og liggur í hring.
+Nú er verið að skipuleggja tilraun þar sem skella á tveimur eindum saman.
+Í byrjun er rafeind sett í hringinn og hraða seglarnir henni áfram.
+Rafeindin ferðast ávallt heiltölufjölda Planck lengda áfram.
+Þar sem hún er að fara hraðar og hraðar ferðast hún ávallt lengra en síðast.
+Í fyrsta skrefi eru helmingslíkur að hún fari eina Planck lengd, fjórðungslíkur að hún fari tvær og svo framvegis.
+Eins ef hún ferðaðist $k$ Planck lengdir síðast eru helmingslíkur að hún fari $k + 1$ næst,
+fjórðungslíkur að hún fari $k + 2$ næst og svo framvegis.
+Þegar eindin færist um $\geq N$ Planck lengdir í einu halda seglarnir ekki í við að halda henni inn á brautinni.
+Því viljum við skella henni á aðra eind á þeirri agnarstundu sem það gerist.
+Til þess þarf eindin að vera komin þar sem hún byrjaði þegar þetta gerist.
+Hverjar eru líkurnar á því?
+
+Til dæmis, ef $N = 7$ gæti hún farið tvær Planck lengdir áfram, svo þrjár og loks sex áður en hún þarf að vera komin á upphafspunkt.
+Í þessu dæmi endar hún ekki þar aftur, en margir aðrir ferlar koma til greina.
+Til að átta okkur á hversu oft fráhrindandi áhrifin koma til leiks höfum við áhuga á líkunum á að eindin verði á upphafspunkti þegar rannsókn lýkur.
+Ef eindin er í upphafspunkti er jafn líklegt að hún fari til vinstri og að hún fari til hægri.
+Ef eindin færðist um $k$ skref síðast er jafn líklegt að hún taki $k + 1$ skref og að hún taki fleiri.
+Eins er jafn líklegt að hún taki $k + 2$ og hún taki fleiri, svo það eru helmingslíkur á $k + 1$, fjórðungslíkur á $k + 2$ og svo framvegis.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina tölu $1 \leq t \leq 100$, fjölda prófunartilfella.
+Svo koma $t$ línur, hver með einni heiltölu $1 \leq N \leq 10^{18}$.
+
+\section*{Úttak}
+Fyrir hvert $N$ í inntaki skal prenta líkunum sem lýst er að ofan fyrir það $N$ á sinni eigin línu.
+Líkurnar má rita sem fullstytt brot $p/q$.
+Þar sem þessar tölur gætu verið mjög stórar skal í staðinn prenta $pq^{-1}$ mátað við $1\,000\,000\,007$,
+þar sem $q^{-1}$ er margföldunarandhverfa $q$ með tilliti til mátunar við $1\,000\,000\,007$.
+
+Til dæmis, ef $p=2$ og $q=4$, þá finnum við heiltöluna $q^{-1}$ sem uppfyllir $q \cdot q^{-1} \equiv 1 \pmod{1\,000\,000\,007}$.
+Þar sem $4 \cdot 250\,000\,002 = 1\,000\,000\,008$ og $1\,000\,000\,008 \equiv 1 \pmod{1\,000\,000\,007}$ getum við reiknað út
+$pq^{-1} \equiv 2 \cdot 250\,000\,002 \equiv 500\,000\,004 \pmod{1\,000\,000\,007}$.

@@ -1,0 +1,3 @@
+[submodule "fkhi/2023/testdata_tools"]
+	path = fkhi/2023/testdata_tools
+	url = git@github.com:Kodsport/testdata_tools.git

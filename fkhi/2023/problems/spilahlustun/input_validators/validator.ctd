@@ -1,0 +1,8 @@
+INT(1, 500000, n) SPACE INT(1, 500000, q) NEWLINE
+REP(q)
+    INT(1, n, i)
+    SPACE
+    INT(i, n, j)
+    NEWLINE
+END
+EOF

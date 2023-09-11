@@ -1,0 +1,27 @@
+\problemname{Girðingaherping}
+
+Búið er að leggja niður girðingu fyrir nýrri byggingu. Hins vegar hafa borist fregnir um að skera eigi niður, svo minnka
+þarf lóðina. Stærðfræðingarnir höfðu eitthvað orð á því að herpingar væri hentugar til að gera slíkt, svo ætlunin er að
+herpa jaðar svæðisins þannig að flatarmálið helmingast. Lítum á jaðar svæðisins sem runu línustrika sem byrja og enda á
+sama stað án þess að tvö línustrik skerist, nema í endapunktum aðlægra línustrika. En þegar þetta var prófað kom í ljós
+að það að draga allt saman um einn punkt gat ollið því að sumir hlutar enduðu utan við upprunalegu lóðina, sem gengur
+ekki. Eftir langa fundi við reynda rúmfræðinga er sú lausn lögð fram að hliðra hverju línustriki um þvervigur sinn inn
+á við og stytta eða lengja það svo mátulega þannig að það leggist að aðlægu línustrikunum. Þá þarf einfaldlega að finna
+út úr því hvað hliðra á hverju striki langt svo að flatarmálið helmingast.
+
+Þetta gengur vel fyrir sumar teikningar en ekki aðrar, því það sem getur gerst er að línustrik sem ekki eru aðlæg renni
+svo langt að þau rekist utan í hvort annað. Þegar þetta gerist segjum við að hliðrunin sé ógild. Enn fremur er hliðrun
+ógild ef hún hliðrar girðingum gegnum hvora aðra. Ef hvorugt af þessu gerist telst hliðrunin gild.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur eina heiltölu $n$, fjölda hornpunkta línustrikanna sem lýsa lóðinni, sem uppfyllir
+$3 \leq n \leq 5 \cdot 10^4$.
+Næstu $n$ línur innihalda hornpunkta lóðarinnar, gefnir í jákvætt áttaðri röð meðfram jaðrinum. Hverjum punkti er lýst
+með tveimur heiltölum $x, y$ með bili á milli sem uppfylla $-10^9 \leq x, y \leq 10^9$. $x$ lýsir $x$-hniti punktsins
+og $y$ lýsir $y$-hniti punktsins. Engir þrír punktar í röð liggja á sömu línu.
+
+\section*{Úttak}
+Ef engin gild hliðrun helmingar flatarmálið, prentið ,,Omogulegt!''. Prentið annars fjarlægðina sem hliðra á hverju
+línustriki. Svar telst rétt ef bein eða hlutfallsleg skekkja þess frá réttu svari er mest $10^{-6}$. Ef til er gild hliðrun
+sem helmingar flatarmálið er einnig til hliðrun sem tekur flatarmálið í $0.5 - 10^{-5}$ sinnum upprunalega flatarmálið.
+

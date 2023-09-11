@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+
+sample 1
+
+tc randtiny random_generator 20
+tc randsmall random_generator 1000
+tc randmedium random_generator 1000000000
+tc randbig random_generator 1000000000000000000
+tc bigdivs random_generator -1
+tc bigprime random_generator -2
+tc mix random_generator -3
+tc nasty random_generator -4

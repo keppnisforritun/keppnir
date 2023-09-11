@@ -1,0 +1,29 @@
+\problemname{Flæðasmíði}
+
+Verið er að nýta sumarið í viðhaldsvinnu og Veitum vantar aðstoð við að skipuleggja vatnslagnir.
+Búið er að finna $n$ uppsprettur sem þarf nú að tengja við $m$ neytendur.
+Hver uppspretta gefur nákvæmlega $1 \mathrm{L/s}$ og þægilegt nokk geta lagnirnar flutt nákvæmlega $1 \mathrm{L/s}$.
+En hver neytandi þarf að fá jafn mikið vatn og allir aðrir, annars myndast ósætti sem gengur ekki.
+Til þess að laga þetta er hægt að skeyta saman lögnum.
+Hver samskeytipunktur getur haft allt að tveimur inntökum og allt að tveimur úttökum.
+Flæði út er ávallt jafnt flæði inn,
+en þar til viðbótar passar samskeytingin upp á að ef tvö úttök eru til staðar muni flæðið um bæði úttök ávallt vera jafn mikið.
+Einnig eru lagnirnar útbúnar ventilum svo ef lögn er lögð frá $A$ til $B$ flæðir vatnið aðeins í þá átt, ekki til baka.
+Nú þarf að skipuleggja hvernig raða má niður samskeytipunktum og lögnum til að tengja inntök við úttök.
+Hver neytandi þarf að fá $\frac{n}{m} \mathrm{L/s}$.
+Einnig þarf að passa upp á að hver lögn geti aðeins tekið $1 \mathrm{L/s}$, samskeytingarnar geta hins vegar þolað allt sem lagnirnar bera í þær.
+Uppspretturnar eru númeraðar $1, 2, \dots, n$ og neytendur $n + 1, n + 2, \dots, n + m$.
+Fjármagn er ekki endalaust, svo heildarfjöldi samskeyta í úttaki má mest vera $50\,000$.
+Eins má heildarfjöldi lagna ekki vera meiri en $50\,000$.
+Loks má ekki leggja lögn út frá neytanda.
+
+\section*{Inntak}
+Inntakið inniheldur tvær heiltölur $1 \leq n \leq m \leq 1\,000$.
+
+\section*{Úttak}
+Fyrsta lína úttaks skal innihalda tölurnar $V$ og $E$, fjölda samskeyta,uppsprettur og neytendur meðtaldir, og fjöldi lagna milli þeirra.
+Ný samskeyti eru þá númeruð $n + m + 1, n + m + 2, \dots, V$.
+Næst skulu koma $E$ línur, hver lýsir einni lögn.
+Ef lögnin liggur frá samskeytum $A$ til $B$ skal prenta $A$ og $B$ með einu bili á milli.
+
+Ef til eru margar lausnir máttu skrifa út einhverja þeirra.

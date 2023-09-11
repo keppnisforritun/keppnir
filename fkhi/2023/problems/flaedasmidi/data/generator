@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+
+sample 1
+sample 2
+sample 3
+
+tc pow2_0 random_generator 1 1
+# sample 1 is tc pow2_1 random_generator 1 2
+tc pow2_2 random_generator 1 4
+tc pow2_3 random_generator 1 8
+tc pow2_4 random_generator 1 16
+tc pow2_5 random_generator 1 32
+tc pow2_6 random_generator 1 64
+tc pow2_7 random_generator 1 128
+tc pow2_8 random_generator 1 256
+tc pow2_9 random_generator 1 512
+
+tc rand0 random_generator 154 441
+tc rand1 random_generator 441 493
+tc rand2 random_generator 470 569
+tc rand3 random_generator 343 494
+tc rand4 random_generator 524 877
+tc rand5 random_generator 448 724
+tc rand6 random_generator 183 723
+tc rand7 random_generator 359 946
+tc rand8 random_generator 234 584
+tc rand9 random_generator 864 885
+
+tc common1 random_generator 875 1000
+tc common2 random_generator 333 999
+
+tc max random_generator 999 1000
+tc prime_pair_1 random_generator 991 997
+tc prime_pair_2 random_generator 983 997
+tc prime_pair_3 random_generator 977 997
+tc prime_pair_4 random_generator 983 991
+tc prime_pair_5 random_generator 977 991
+tc prime_pair_6 random_generator 977 983
+

@@ -1,0 +1,6 @@
+INT(1, 1000, n)
+SPACE
+INT(1, 1000, m)
+NEWLINE
+ASSERT(n <= m)
+EOF

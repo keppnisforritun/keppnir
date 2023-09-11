@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_array.cpp opt
+
+compile random_generator.py
+
+sample 1
+sample 2
+sample 3
+
+MAX_N=200
+BELOW_MAX_N=$(($MAX_N-1))
+
+tc edge-01 random_generator 1 1 1 1
+tc edge-02 random_generator 1 1 2 2
+tc edge-03 random_generator 2 2 1 1
+tc edge-04 random_generator 2 2 2 2
+tc edge-05 random_generator 3 3 1 1
+tc edge-06 random_generator 3 3 2 2
+tc edge-07 random_generator 4 4 1 1
+tc edge-08 random_generator 4 4 2 2
+tc edge-09 random_generator 5 5 1 1
+tc edge-10 random_generator 5 5 2 2
+tc edge-11 random_generator 10 10 1 1
+tc edge-12 random_generator 10 10 2 2
+
+for i in {01..10}; do
+tc small-$i random_generator 3 10 0 0
+done;
+for i in {11..20}; do
+tc small-$i random_generator 3 10 3 10
+done;
+
+for i in {01..10}; do
+tc large-$i random_generator 11 "$BELOW_MAX_N" 0 0
+done;
+for i in {11..20}; do
+tc large-$i random_generator 11 "$BELOW_MAX_N" 3 "$BELOW_MAX_N"
+done;
+for i in {21..25}; do
+tc large-$i random_generator 11 "$BELOW_MAX_N" 1 1
+done;
+for i in {26..30}; do
+tc large-$i random_generator 11 "$BELOW_MAX_N" 2 2
+done;
+tc large-31 random_generator "$MAX_N" "$MAX_N" 0 0
+tc large-32 random_generator "$MAX_N" "$MAX_N" 1 1
+tc large-33 random_generator "$MAX_N" "$MAX_N" 2 2
+for i in {34..50}; do
+tc large-$i random_generator "$MAX_N" "$MAX_N" 3 9
+done;
+for i in {51..60}; do
+tc large-$i random_generator "$MAX_N" "$MAX_N" 10 "$BELOW_MAX_N"
+done;
+tc large-61 random_generator "$MAX_N" "$MAX_N" "$MAX_N" "$MAX_N"
+tc large-62 random_generator "$MAX_N" "$MAX_N" "$MAX_N" "$MAX_N"

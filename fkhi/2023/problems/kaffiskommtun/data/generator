@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+
+sample 1
+sample 2
+
+MAX_N=1000000
+
+for i in {01..08}; do
+tc small-$i random_generator 1 1000 10 1000
+done;
+
+for i in {01..08}; do
+tc big-$i random_generator 1001 $MAX_N 100 100
+done;
+
+tc large-gap random_generator $MAX_N $MAX_N 500 500
+tc large-close random_generator $MAX_N $MAX_N 10 10
+tc cluster random_generator $MAX_N $MAX_N 500 1000000
+tc easy-serve random_generator $MAX_N $MAX_N 500 1
+tc tiny-serve random_generator $MAX_N $MAX_N 1 100

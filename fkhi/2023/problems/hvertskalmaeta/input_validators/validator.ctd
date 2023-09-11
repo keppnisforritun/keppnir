@@ -1,0 +1,2 @@
+REGEX("Reykjavik|Kopavogur|Hafnarfjordur|Reykjanesbaer|Akureyri|Gardabaer|Mosfellsbaer|Arborg|Akranes|Fjardabyggd|Mulathing|Seltjarnarnes") NEWLINE
+EOF

@@ -1,0 +1,36 @@
+\problemname{Deildajöfnuður}
+
+Rektor háskólans er að skipuleggja fjármál háskólans.
+Fjármagnið kemur frá Menntamálaráðuneytinu og fylgir því vel skilgreindum ríkisstaðli.
+Ráðuneytið styrkir háskólann með því að bjóða upp einhvern fjölda styrkja.
+Í háskólanum eru $26$ deildir, hver þeirra merkt með enskum bókstaf.
+Hver styrkur er tileinkaður sérstakri deild, og er það ráðuneytið sem ákveður deildina sem styrkurinn er tileinkaður.
+Allir styrkirnir eru einnig jafn stórir.
+
+Rektorinn getur samþykkt eða hafnað hverjum styrk fyrir sig, en strangar reglur gilda um þetta ferli.
+Til að takmarka fjárhagslega ringulreið fyrir ráðuneytið, þarf rektorinn að velja eina samfellda runu af styrkjum sem hann samþykkir.
+Röð styrkjana er ákvörðuð fyrirfram og er rektornum óheimilt að endurraða þeim.
+Það þýðir að það getur ekki verið styrkur sem hann neitar milli fyrsta samþykkta styrksins og síðasta samþykkta styrksins.
+Annars væri of erfitt fyrir ráðuneytið að skipuleggja fjárhagsáætlun sína.
+
+Rektorinn vill hámarka samtals fjármagnið sem háskólinn fær.
+Hann vill helst samþykkja alla styrkina.
+Því miður er lífið hans ekki svo einfalt, þar sem krafa er að allar deildir sem fá fjármagn fái jafn mikið fjármagn.
+Það þýðir að sumar deildir mega vera ófjármagnaðar.
+Sumar deildir gætu jafnvel ekki verið tilnefndar fyrir neinn styrk frá ráðuneytinu.
+
+Getur þú fundið hæsta fjölda styrkja sem rektorinn getur samþykkt sem uppfyllir þessi skilyrði?
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur eina heiltölu $n$, fjölda styrkja, þar sem $1 \leq n \leq 200$.
+Önnur lína inntaksins inniheldur $n$ enska lágstafi, einn fyrir hvern styrk, þar sem hver stafur táknar deildina sem styrkurinn er tileinkaður.
+
+\section*{Úttak}
+Skrifaðu út eina heiltölu, hæsta fjölda styrkja sem rektorinn getur samþykkt og samt tryggt að allar fjármagnaðar deildir fái jafn mikið fjármagn.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu getur rektorinn samþykkt alla styrkina, því hver einasta deild sem kemur fyrir í inntakinu kemur fyrir nákvæmlega einu sinni.
+
+Í öðru sýnidæminu getur rektorinn samþykkt styrkina \texttt{narnar}, þar sem sérhver deild kemur fyrir tvisvar. Athugið að þó að deildin \texttt{h}, til dæmis, komi fyrir í inntakinu, þá er hún ófjármögnuð í þessu tilviki, sem er í lagi.
+
+Í þriðja sýnidæminu getur rektorinn samþykkt styrkina \texttt{arnanrnarnraranrna}, þar sem sérhver deild kemur fyrir $6$ sinnum.

@@ -1,0 +1,3 @@
+#!/bin/bash
+dir=$(pwd)
+/usr/bin/g++ -I $dir/ cpp_src/matrix_check.cpp -o run -O2

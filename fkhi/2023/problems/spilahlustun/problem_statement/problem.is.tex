@@ -1,0 +1,26 @@
+\problemname{Spilahlustun}
+
+Veskið hans Jörmunreks er orðið ansi létt nú undir lok náms hans, svo hann er að leita að frumlegum aðferðum til
+að laga þann vanda. Eftir að hafa setið líkindafræðiáfanga veit hann að flest spil upp á peninga með spilastokk eru ekki í hans hag, en hann
+er með smá bragð í huga. Hann er búinn að kaupa sér lítinn hljóðnema sem hann festir undir borðið sem hann spilar við.
+Til þess að sjá til þess að stokkunin sé sanngjörn er lítil stokkunarvél notuð, vél sem er nægilega hljóðlát til að
+mannfólk heyri ekkert í henni. Hún stokkar með því að taka hlut af spilunum, snúa þeim við svo þau séu í öfugri röð, og
+svo endurtaka þetta nógu oft. Vélin passar svo einfaldlega upp á að snúa efsta spilinu við rétt áður en spilið er gefið ef 
+nauðsyn krefur. Í gegnum hljóðnemann getur Jörmunrekur mælt hversu langt rafmótorar tækisins færast áður en spilum er snúið,
+og hvað armurinn breikkast vítt til að tína þau upp. Þar með veit hann hvaða spilum er snúið við í hvert sinn. Hann þarf
+hins vegar að einbeita sér að spilinu, svo hann þarf forrit sem segir honum röð spilana í lok stokkunar.
+Getur þú búið til slíkt forrit?
+Spilin eru númeruð frá $1$ upp í $n$.
+Í upphafi er efsta spilið $1$, næstefsta spilið er $2$, og svo framvegis, alveg þar til komið er að neðsta spilinu, sem er $n$.
+Öll spilin snúa niður í upphafi.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær heiltölur $n$, fjölda spila, þar sem $1 \leq n \leq 5 \cdot 10^5$, og $q$, fjölda snúninga í stokkuninni, þar sem $1 \leq q \leq 5 \cdot 10^5$.
+og $q$ er fjöldi snúninga í stokkuninni. Svo koma $q$ línur sem hver lýsa einni viðsnúningu í formi tveggja talna $1 \leq 
+i \leq j \leq n$. Þetta merkir að frá og með $i$-ta efsta spilinu til og með $j$-ta efsta spilinu sé snúið sem einni heild. Snúningarnir
+eru gefnir í þeirri röð sem vélin framkvæmir þá.
+
+\section*{Úttak}
+Skrifaðu út númerið á sérhverju spili frá toppi til botns, eins og þau eru röðuð í lok stokkunar.
+Ef spil $k$ snýr upp í lokin skaltu skrifa út $-k$ í staðin fyrir $k$.
+

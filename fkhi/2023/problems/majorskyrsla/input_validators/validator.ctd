@@ -1,0 +1,5 @@
+INT(1, 100000, n)
+SPACE
+INT(0, n * (n - 1) / 2)
+NEWLINE
+EOF

@@ -1,0 +1,245 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{gensymb}
+\usepackage{parskip}
+\usepackage{mathtools}
+
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{minted}
+\parskip 0pt
+
+\newcommand\floor[1]{\left\lfloor#1\right\rfloor}
+\newcommand\ceil[1]{\left\lceil#1\right\rceil}
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\p[1]{\left(#1\right)}
+\newcommand\sqp[1]{\left[#1\right]}
+\newcommand\cp[1]{\left\{#1\right\}}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\usetheme{Frankfurt}
+
+\title{Lokakeppnislausnir}
+\author{Atli Fannar Franklín}
+\date{\today}
+
+\graphicspath{{myndir/}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Hvert skal mæta?}
+
+\begin{itemize}
+
+\item Beðið er um að segja hvert keppandi á að mæta til að keppa útfrá heimabæ.
+
+\vspace*{0.5cm}
+
+\item Þegar lesið er úr töflunni sést að allir mæta til Reykjavíkur nema þeir frá Akureyri, Fjarðabyggð eða Múlaþingi.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Atlögur}
+
+\begin{itemize}
+
+\item Að krafti riddarra gefnum, ákvarðaðu hver sigrar.
+
+\vspace*{0.5cm}
+
+\item Við getum hermt þetta beint. Höldum utan um hverjir eru að berjast, og bætum við nýjum í slaginn hvert sinn sem einhver dettur út. Svo hermum við einfaldlega hvert högg fyrir sig.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Deildajöfnuður}
+
+\begin{itemize}
+
+\item Að streng gefnum, finndu lengd lengsta hlutstrengsins þar sem allir stafir koma jafn oft fyrir (af þeim sem koma fyrir yfir höfuð).
+
+\vspace*{0.25cm}
+
+\item Það eru $O(n^2)$ mögulegir hlutstrengir og það tekur $O(n + c)$ að skoða hvern þeirra ef við bara teljum hvað er mikið af hverjum staf ($c$ er fjöldi ólíkra stafa, þ.e. $26$).
+
+\vspace*{0.25cm}
+
+\item Getum því einfaldlega prófað allt og prentað lengdina á lengsta sem við fundum.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Majórskýrsla}
+
+\begin{itemize}
+
+\item Viljum endurraða tölunum $1, 2, \dots, n$ þannig að summa sætanna þar sem tala er stærri en sú sem kemur á eftir er $k$.
+
+\vspace*{0.25cm}
+
+\item Það eru til margar aðferðir til að smíða svona. Ein er að velja bara hvaða sæti eiga að hafa tölu sem er stærri en sú sem er
+á eftir þannig að summan sé rétt. Til dæmis má gera þetta með því að skoða næst aftasta sætið, hafa það með ef summan verður ekki of stór, skoða svo þriðja aftasta sætið og gera eins, koll af kolli.
+
+\vspace*{0.25cm}
+
+\item Til að hvert sæti fái gildi sem fylgir því sem við erum búin að ákveða má setja til skiptis stærstu eða minnstu töluna sem við eigum eftir, eftir því hvort næsta tala á að vera minni eða stærri.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Töskupökkun}
+
+\begin{itemize}
+
+\item Viljum finna minnsta hliðið sem dugar til að koma öllum töskum í gegn á nógu stuttum tíma.
+
+\vspace*{0.25cm}
+
+\item Ef hlið af stærð $h$ dugar, þá duga öll hlið af stærð $H > h$. Því getum við helmingunarleitað að rétta $h$.
+
+\vspace*{0.25cm}
+
+\item Segjum að við séum þá að skoða tiltekið $h$. Fyrir tiltekna tösku $(x, y, z)$ viljum við að stysta hliðin sé sú sem er hornrétt á hliðið. Segjum að $x \leq y \leq z$, þá getum við það ef $z \leq h$. Annars verðum við að snúa töskunni með $z$ hornrétt á. 
+
+\vspace*{0.25cm}
+
+\item Leggjum því samsvarandi lengdir saman, það er þá hægt fyrir þetta $h$ ef samtals lengdin er innan marka.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Kaffiskömmtun}
+
+\begin{itemize}
+
+\item Fáum hvenær hver fer og fær sér kaffi og viljum skipuleggja hver hellir upp á svo sem flestir fái kaffi.
+
+\vspace*{0.25cm}
+
+\item Eina ákvörðunin er í raun hvort hver helli upp á eða ekki. Notum kvika bestun og látum \texttt{dp[i]} vera hversu margir geta mest fengið kaffi ef manneskja $i$ kemur að tómri könnu.
+
+\vspace*{0.25cm}
+
+\item Þá viljum við að $i$ helli upp á, svo eftir $t$ sekúndur geta næstu $c$ fengið kaffi og mögulega hellt upp á aftur. Svo ef $j$ er fyrsta manneskjan eftir að $t$ sek eru liðnar þá látum við \texttt{dp[i]} vera max af \texttt{k - j + dp[k] + 1} þar sem $k$ hleypur frá $j$ til $j + c$.
+
+\vspace*{0.25cm}
+
+\item Lokaskrefið er að helmingunarleita að $j$ svo við finnum það nógu hratt.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Flæðasmíði}
+
+\begin{itemize}
+
+\item Smíða á net þannig að flæðið stemmi, með því skilyrði að úttök hverrar nóðu hafa ávallt jafnt flæði.
+
+\vspace*{0.25cm}
+
+\item Til að fá rétt flæði þarf að vera með lykkjur, eins og sést á sýniinntaki.
+
+\vspace*{0.25cm}
+
+\item Aðalhugmyndin er að hægt er að skipta flæðinu á $2^k$ jafnar leiðslur, og svo láta afgangs $2^k - m$ leiða til baka í lykkju, svo allt gangi upp.
+
+\vspace*{0.25cm}
+
+\item Passa þarf að vera sparsamur með leiðslur því lausnir geta endað ansi nálægt $50000$ leiðslum fyrir stærstu inntök.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Eindahraðall}
+
+\begin{itemize}
+
+\item Finnið fjölda hlutmengja $\mathbb{Z}/n\mathbb{Z}$ með summu $0$ og deilið með $2^n$, mátað við $10^9 + 7$.
+
+\vspace*{0.25cm}
+
+\item Með smá útreikningum (sem ég sleppi hér) eða uppflettingi á A063776 á OEIS má fá að svarið sé 
+\[\frac{1}{n2^n} \sum_{\substack{d|n \\ d \text{ odd}}} \varphi(d) 2^{n/d}\]
+
+\vspace*{0.25cm}
+
+\item Til að ítra yfir alla deila og hafa frumþáttanir þeirra þarf að frumþátta $n$ fyrst, sem vegna stærðar þarf að gera með einhverju eins og Miller-Rabin og Pollard-Rho.
+
+\vspace*{0.25cm}
+
+\item Nasty edge case: Ef $n$ er margfeldi af $10^9 + 7$ virkar formúlan ekki, svo vinna þarf modulo $(10^9 + 7)^2$ svo hægt sé að deila í lokin.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Spilahlustun}
+
+\begin{itemize}
+
+\item Haldið utan um spilastokk þegar hlutum er snúið við.
+
+\vspace*{0.25cm}
+
+\item Við smíðum splay tré sem heldur utan um núverandi röð.
+
+\vspace*{0.25cm}
+
+\item Til að snúa við hratt leyfum við hverri nóðu að hafa boolean gildi sem segir hvort allt undir henni sé viðsnúið.
+
+\vspace*{0.25cm}
+
+\item Þá má snúa við $[l, r]$ með því að skipta splay trénu í $[1, l[$, $[l, r]$, og $]r, n]$ og flippa boolean gildinu í rót $[l, r]$ trésins, svo sameina tréin aftur. Passa þarf að propagate-a þessu boolean gildi niður áður tree rotations eru gerð.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Girðingaherping}
+
+\begin{itemize}
+
+\item Finnið hversu mikið þarf að herpa girðingu til að flatarmálið helmingist.
+
+\vspace*{0.25cm}
+
+\item Herpingin minnkar flatarmál einhalla m.t.t. hliðrunar, svo við getum helmingarleitað gildið.
+
+\vspace*{0.25cm}
+
+\item Stórar hliðranir geta snúið við marghyrningum alveg. Í þessum tilfellum má sjá að eitthvað er að því annað hvort eru punktarnir ekki í rangsælis röð lengur, eða punktur sem var neðst er kominn uppfyrir granna sína.
+
+\vspace*{0.25cm}
+
+\item Loks fyrir millivandræðin þar sem marghyrningurinn sker sjálfan sig getum við fundið hvort línustrikin skerast með einu hröðu sweepline.
+
+\end{itemize}
+
+\end{frame}
+
+\end{document}

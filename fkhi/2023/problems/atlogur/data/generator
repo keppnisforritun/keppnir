@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar.cpp opt
+
+compile random_generator.py
+
+sample 1
+sample 2
+sample 3
+
+MAX_N=1000
+MAX_H=10000
+MAX_S=10000
+
+tc glasscannons-01 random_generator 1 1 1 1 $MAX_S $MAX_S none
+tc glasscannons-02 random_generator 2 2 1 1 $MAX_S $MAX_S none
+tc glasscannons-03 random_generator 3 3 1 1 $MAX_S $MAX_S none
+tc glasscannons-04 random_generator 4 $(($MAX_N-1)) 1 1 $MAX_S $MAX_S none
+tc glasscannons-05 random_generator 4 $(($MAX_N-1)) 1 2 $MAX_S $MAX_S none
+tc glasscannons-06 random_generator 4 $(($MAX_N-1)) 1 2 $MAX_S $MAX_S none
+tc glasscannons-07 random_generator 4 $(($MAX_N-1)) 1 10 $MAX_S $MAX_S none
+tc glasscannons-08 random_generator $MAX_N $MAX_N 1 2 $MAX_S $MAX_S none
+tc glasscannons-09 random_generator $MAX_N $MAX_N 1 2 $MAX_S $MAX_S none
+tc glasscannons-10 random_generator $MAX_N $MAX_N 1 1 $MAX_S $MAX_S none
+
+tc tanks-01 random_generator 1 1 $MAX_H $MAX_H 1 1 none
+tc tanks-02 random_generator 2 2 $MAX_H $MAX_H 1 1 none
+tc tanks-03 random_generator 3 3 $MAX_H $MAX_H 1 1 none
+tc tanks-04 random_generator 4 $(($MAX_N-1)) $MAX_H $MAX_H 1 1 none
+tc tanks-05 random_generator 4 $(($MAX_N-1)) $MAX_H $MAX_H 1 2 none
+tc tanks-06 random_generator 4 $(($MAX_N-1)) $MAX_H $MAX_H 1 2 none
+tc tanks-07 random_generator 4 $(($MAX_N-1)) $MAX_H $MAX_H 1 10 none
+tc tanks-08 random_generator $MAX_N $MAX_N $MAX_H $MAX_H 1 2 none
+tc tanks-09 random_generator $MAX_N $MAX_N $MAX_H $MAX_H 1 2 none
+tc tanks-10 random_generator $MAX_N $MAX_N $MAX_H $MAX_H 1 1 none
+
+tc lowdamage-01 random_generator 1 1 100 $MAX_H 1 100 none
+tc lowdamage-02 random_generator 2 2 100 $MAX_H 1 100 none
+tc lowdamage-03 random_generator 2 2 100 $MAX_H 1 100 none
+tc lowdamage-04 random_generator 3 $(($MAX_N-1)) 100 $MAX_H 1 100 none
+tc lowdamage-05 random_generator 3 $(($MAX_N-1)) 100 $MAX_H 1 100 none
+tc lowdamage-06 random_generator 3 $(($MAX_N-1)) 100 $MAX_H 1 100 none
+tc lowdamage-07 random_generator 3 $(($MAX_N-1)) 100 $MAX_H 1 100 none
+tc lowdamage-08 random_generator 3 $(($MAX_N-1)) 100 $MAX_H 1 100 none
+tc lowdamage-09 random_generator 3 $(($MAX_N-1)) 100 $MAX_H 1 100 none
+tc lowdamage-10 random_generator $MAX_N $MAX_N 100 $MAX_H 1 100 none
+
+for i in {01..05}; do
+tc random-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_S none
+done;
+for i in {01..05}; do
+tc random-sa-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_N "sa"
+done;
+for i in {01..05}; do
+tc random-sd-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_N "sd"
+done;
+for i in {01..05}; do
+tc random-ha-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_N "ha"
+done;
+for i in {01..05}; do
+tc random-ha-sa-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_N "hasa"
+done;
+for i in {01..05}; do
+tc random-ha-sd-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_N "hasd"
+done;
+for i in {01..05}; do
+tc random-hd-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_N "hd"
+done;
+for i in {01..05}; do
+tc random-hd-sa-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_N "hdsa"
+done;
+for i in {01..05}; do
+tc random-hd-sd-$i random_generator 1 $MAX_N 1 $MAX_H 1 $MAX_N "hdsd"
+done;

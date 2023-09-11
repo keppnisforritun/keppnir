@@ -1,0 +1,4 @@
+INT(1, 200, n) NEWLINE
+REGEX("[a-z]*", s) NEWLINE
+ASSERT(STRLEN(s) == n)
+EOF

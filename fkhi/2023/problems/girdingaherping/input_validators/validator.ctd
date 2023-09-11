@@ -1,0 +1,10 @@
+# Does not check non-intersection, ccw or close points
+INT(3, 50000, n)
+NEWLINE
+REP(n, NEWLINE)
+    INT(-1000000000, 1000000000)
+    SPACE
+    INT(-1000000000, 1000000000)
+END
+NEWLINE
+EOF

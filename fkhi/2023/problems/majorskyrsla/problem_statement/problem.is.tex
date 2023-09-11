@@ -1,0 +1,23 @@
+\problemname{Majór Skýrsla}
+
+Þér hefur borist það verkefni að raða upp og undirbúa skýrslu fyrir breskan majór. Þessi majór stundar
+stærðfræði í frítíma sínum og kann því vel að meta mynstur og tölur í öllu sem hann sér. Þegar honum
+berst bunki af pappírum stundar hann oft að skoða vísi bunkans. Hver blaðsíða inniheldur einhverjar upplýsingar,
+og eru þessar upplýsingar mismikilvægar. Til að reikna vísinn fer hann í gegnum bunkann
+frá toppi til botns og leggur saman öll blaðsíðutöl þar sem blaðsíðan er mikilvægari en sú sem á eftir kemur.
+Svo ef þriðja blaðsíðan sem hann les er mikilvægari en sú fjórða bætir hann þremur við vísinn.
+Getur þú raðað öllum $n$ blaðsíðum skýrslunnar svo vísi bunkans sé $k$, uppáhalds tala majórsins?
+
+\section*{Inntak}
+Fyrsta og eina lína inntaksins innheldur tvær heiltölur $n$, fjöldi blaðsíðna, þar sem $1 \leq n \leq 10^5$,
+og $k$, uppáhaldstala majórsins, þar sem $0 \leq k \leq \frac{n \cdot (n-1)}{2}$.
+
+\section*{Úttak}
+Prentið tölurnar $1, 2, \dots, n$ í einhverri röð á einni línu með einu bili milli talna. Fremsta talan samsvarar
+síðunni sem majórinn les fyrst og aftasta síðunni sem hann les síðast.
+Minnst mikilvæga blaðsíðan er táknuð af $1$,
+næst minnst mikilvæga blaðsíðan er táknuð af $2$,
+og svo framvegis upp í $n$ sem er mikilvægasta blaðsíðan.
+Úttakið þitt er talið rétt ef bunkinng sem það lýsir hefur vísinn $k$.
+
+Til dæmis ef $n=5$ og $k=4$, þá væri úttakið \texttt{5 2 4 1 3} talið rétt því fyrsta og þriðja blaðsíðan mikilvægari en sú næsta, svo vísirinn er $1+3=4$.

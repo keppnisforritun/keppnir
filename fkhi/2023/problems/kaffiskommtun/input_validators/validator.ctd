@@ -1,0 +1,14 @@
+INT(1, 1000000, n)
+SPACE
+INT(1, 500, c)
+SPACE
+INT(1, 1000000000, t)
+NEWLINE
+SET(l = 0)
+REP(n, SPACE)
+    INT(1, 1000000000, x)
+    ASSERT(l <= x)
+    SET(l = x)
+END
+NEWLINE
+EOF

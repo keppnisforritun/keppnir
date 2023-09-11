@@ -1,0 +1,29 @@
+\problemname{Atlögur}
+
+Guðmundur er doktorsnemi í sögu og stundar námið í íslenskum háskóla.
+Hann hefur brennandi áhuga á einvígum og háttum riddara fortíðarinnar.
+Á miðöldum, og fyrr á tíð, voru atlögur milli riddara algengar.
+Rannsóknir hans eru um þessa riddara og hefur hann mestan áhuga á að skrifa um sigursælasta riddarann.
+
+Guðmundur hefur fundið handrit sem lýsir $n$ riddurum.
+Í handritinu hafði riddurunum verið raðað eftir tilhneigingu þeirra að leggja til atlögu.
+Fyrsti riddarinn mun því gera atlögu að öðrum riddaranum.
+Sigurvegarinn mun svo gera atlögu að þriðja riddaranum, og svo framvegis.
+Það er einungis ein atlaga í gangi á hverri stundu og eru alltaf einungis tveir riddarar í hverri atlögu.
+
+Riddarinn sem lagði til atlögunnar fékk að gera fyrstu árás.
+Þegar riddari $i$ skaðaði annan riddara $j$, þá lækkaði hann hraustleika hins riddarans, $h_j$, um styrk sinn $s_i$.
+Ef hraustleiki hins riddarans $h_j$ var ekki lengur jákvæð tala, þá hafði riddari $j$ tapað og riddari $i$ stóð sigursæll.
+Annars hélt atlagan áfram og hinn riddarinn fékk að gera árás.
+Atlagan hélt áfram þar til annar riddarinn var sigursæll, og hélt hann áfram í næstu atlögu.
+Allur skaði sem var skeður við riddarana var endanlegur, heilsa þeirra batnaði ekki milli atlagna.
+
+Það gat því aðeins verið einn sem stóð sigursæll að lokum eftir allar atlögurnar.
+Hvaða riddari var það sem sigraði?
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur eina heiltölu $n$, fjölda riddara, þar sem $1 \leq n \leq 1\,000$.
+Næst fylgja $n$ línur, þar sem $i$-ta línan samanstendur af tveimur heiltölum $h_i$, hraustleika riddara $i$, og $s_i$, styrk riddara $i$, þar sem $1 \leq h_i, s_i, \leq 10\,000$.
+
+\section*{Úttak}
+Skrifaðu út eina heiltölu, vísi riddarans sem stóð sigursæll eftir allar atlögurnar.

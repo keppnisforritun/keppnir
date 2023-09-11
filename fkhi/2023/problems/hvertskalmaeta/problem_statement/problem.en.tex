@@ -1,0 +1,51 @@
+\problemname{Hvert Skal Mæta?}
+
+The Icelandic Collegiate Programming Contest is upon us and all the contestants are registered.
+This leaves only one question: ``Where to attend?''
+
+The simplest option for a contestant is to travel the least amount of distance to reach a contest site.
+Only two municipalities have a contest site, Reykjavík and Akureyri.
+The following table describes the twelve most populated municipalities at the start of the year $2\,023$.
+Additionally, the distance from each of the municipalities that have a contest site is listed.
+
+\begin{tabular}{|l|l|l|l|}
+    \hline
+    Municipality        & Population & Distance from Reykjavík & Distance from Akureyri \\ \hline
+    Reykjavík           & $139\,875$ & $\sim   0 \mathrm{km}$  & $\sim 388 \mathrm{km}$ \\ \hline
+    Kópavogur           &  $39\,810$ & $\sim   6 \mathrm{km}$  & $\sim 387 \mathrm{km}$ \\ \hline
+    Hafnarfjörður       &  $30\,568$ & $\sim  12 \mathrm{km}$  & $\sim 391 \mathrm{km}$ \\ \hline
+    Reykjanesbær        &  $22\,059$ & $\sim  48 \mathrm{km}$  & $\sim 427 \mathrm{km}$ \\ \hline
+    Akureyri            &  $19\,893$ & $\sim 388 \mathrm{km}$  & $\sim   0 \mathrm{km}$ \\ \hline
+    Garðabær            &  $18\,891$ & $\sim   9 \mathrm{km}$  & $\sim 389 \mathrm{km}$ \\ \hline
+    Mosfellsbær         &  $13\,430$ & $\sim  16 \mathrm{km}$  & $\sim 371 \mathrm{km}$ \\ \hline
+    Árborg              &  $11\,239$ & $\sim  64 \mathrm{km}$  & $\sim 428 \mathrm{km}$ \\ \hline
+    Akranes             &   $7\,997$ & $\sim  49 \mathrm{km}$  & $\sim 350 \mathrm{km}$ \\ \hline
+    Fjarðabyggð         &   $5\,262$ & $\sim 659 \mathrm{km}$  & $\sim 290 \mathrm{km}$ \\ \hline
+    Múlaþing            &   $5\,208$ & $\sim 603 \mathrm{km}$  & $\sim 216 \mathrm{km}$ \\ \hline
+    Seltjarnarnes       &   $4\,674$ & $\sim   4 \mathrm{km}$  & $\sim 390 \mathrm{km}$ \\ \hline
+\end{tabular}
+
+For a contestant which is a resident of a given municipality, determine to which contest site the contestant should attend.
+
+\section*{Input}
+Input consists of a single line containing a single string, the name of the contestant's municipality in English characters.
+That means you may assume the string is one of the following:
+
+\begin{itemize}
+    \item \texttt{Reykjavik}
+    \item \texttt{Kopavogur}
+    \item \texttt{Hafnarfjordur}
+    \item \texttt{Reykjanesbaer}
+    \item \texttt{Akureyri}
+    \item \texttt{Gardabaer}
+    \item \texttt{Mosfellsbaer}
+    \item \texttt{Arborg}
+    \item \texttt{Akranes}
+    \item \texttt{Fjardabyggd}
+    \item \texttt{Mulathing}
+    \item \texttt{Seltjarnarnes}
+\end{itemize}
+
+\section*{Output}
+Output the contest site to which the contestant should attend.
+Output the name of the municipality in English characters, either \texttt{Akureyri} or \texttt{Reykjavik}.

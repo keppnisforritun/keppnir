@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+
+sample 1
+sample 2
+
+for i in {01..10}; do
+tc small-$i random_generator 1000 1000 1000 1000
+done;
+
+for i in {01..05}; do
+tc large-$i random_generator 250000 1000000000 1000000000 1000000000
+done;
+
+tc brute-break-1 random_generator 250000 1000000000 100000000 100000000
+tc brute-break-2 random_generator 250000 1000000000 10000000 10000000
+tc brute-break-3 random_generator 250000 1000000000 1000000 1000000
+tc brute-break-4 random_generator 250000 1000000000 100000 100000
+
+tc edge random_generator 250000 -1 -1 -1

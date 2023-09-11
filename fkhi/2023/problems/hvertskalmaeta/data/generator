@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar.cpp
+
+compile random_generator.py
+
+sample 1
+sample 2
+
+tc reykjavik random_generator Reykjavik
+# tc kopavogur random_generator Kopavogur
+tc hafnarfjordur random_generator Hafnarfjordur
+tc reykjanesbaer random_generator Reykjanesbaer
+# tc akureyri random_generator Akureyri
+tc gardabaer random_generator Gardabaer
+tc mosfellsbaer random_generator Mosfellsbaer
+tc arborg random_generator Arborg
+tc akranes random_generator Akranes
+tc fjardabyggd random_generator Fjardabyggd
+tc mulathing random_generator Mulathing
+tc seltjarnarnes random_generator Seltjarnarnes

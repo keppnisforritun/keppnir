@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar.cpp opt
+
+compile random_generator.py
+
+sample 1
+sample 2
+
+tc deep-recursion-01 random_generator 500000 500000 1 1 none
+
+for i in {01..10}; do
+tc small-$i random_generator 4999 5000 5000 5000 none
+done;
+
+tc benni random_generator 250000 300000 500000 500000 benni
+for i in {01..05}; do
+tc large-$i random_generator 499999 500000 500000 500000 none
+done;

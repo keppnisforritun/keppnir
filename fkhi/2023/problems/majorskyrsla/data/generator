@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+
+sample_manual 1
+
+for i in {01..03}; do
+tc tiny-lo-$i random_generator 6 8 0 8
+tc tiny-hi-$i random_generator 6 8 0 28
+done;
+
+for i in {01..03}; do
+tc small-lo-$i random_generator 30 50 0 50
+tc small-hi-$i random_generator 30 50 0 1225
+done;
+
+for i in {01..03}; do
+tc medium-lo-$i random_generator 800 1000 0 1000
+tc medium-hi-$i random_generator 800 1000 0 499500
+done;
+
+for i in {01..03}; do
+tc large-lo-$i random_generator 80000 100000 0 100000
+tc large-md-$i random_generator 80000 100000 0 49950000
+tc large-hi-$i random_generator 80000 100000 0 4999950000
+done;
+
+tc edge-1 random_generator 1 1 0 0
+tc edge-2 random_generator 100000 100000 0 0
+tc edge-3 random_generator 100000 100000 4999950000 4999950000
