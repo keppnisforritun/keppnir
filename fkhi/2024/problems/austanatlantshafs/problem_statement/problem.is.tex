@@ -1,0 +1,49 @@
+\problemname{Austan Atlantshafs}
+\illustration{0.5}{2901}{Mynd eftir Randall Munroe, \href{https://xkcd.com/2901/}{xkcd.com}}
+
+Margar borgir og aðrar stofnanir eiga það til að reisa
+styttur af ýmsum gerðum til að vekja athygli.
+Í þessu samhengi eru stærri styttur auðvitað betri, því
+stærri stytta því meiri athygli.
+Enn betra er ef styttan er sú stærsta á stóru svæði í
+kringum punktinn þar sem hún var reist.
+Sérhver stofnun vil því auglýsa styttuna sína sem ,,stærsta
+styttan í X`` þar sem X er stærsta nefnda svæðið sem gerir
+þetta að sannri staðhæfingu.
+Til dæmis ef stytta væri stærst í allri Evrópu væri það mun
+betri auglýsing en að segja að það sé stærsta stytta Íslands,
+þó það væri auðvitað einnig satt ef hún væri staðsett þar.
+Athugið að ef til dæmis Þýskaland og Frakkland hefðu bæði
+jafn stórar stærstu styttur, þá væri hvorug þeirra stærsta
+stytta Evrópu.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur eina heiltölu $n$, fjöldi
+landsvæða með $1 \leq n \leq 100,000$.
+Næst koma $n$ línur þar sem hver þeirra lýsir einu landsvæði.
+$i$-ta línan inniheldur streng $s_i$, streng $t_i$ og jákvæða
+heiltölu $x_i$, aðskilin með bilum.
+$s_i$ gefur nafn $i$-ta svæðisins og $t_i$ gefur nafn 
+svæðisins sem $i$-ta svæðið er innihaldið í.
+$t_i$ er alltaf eitt af landsvæðunum sem kemur fyrir í
+inntakinu.
+$x_i$ gefur svo loks hæð styttunar $i$-ta svæðinu, þar sem
+$1 \leq x_i \leq 10^9$ ef það er stytta þar og $x_i = -1$ annars.
+Ef svæðið inniheldur önnur svæði mun $x_i = -1$, en $x_i > 0$
+annars.
+Engin tvö ólík svæði hafa sama nafn.
+
+Sérhver strengur í inntaki er af lengd mest $20$ og inniheldur
+bara enska lágstafi.
+Samtals lengd allra strengja í inntaki verður mest $10^6$.
+Fyrsta svæðið verður ávallt \texttt{jord} og inntakið segir
+að það sé innihaldið í sjálfu sér. 
+Ekkert annað svæði er innihaldið
+í sjálfu sér, hvorki beint né gegnum milliliði.
+
+\section*{Úttak}
+Fyrir hvert landsvæði með styttu, prentið nafn stærsta 
+svæðisins þar sem stytta þess er ennþá stærst. Svæði er 
+talið stærra en annað svæði ef það inniheldur hitt svæðið.
+Prenta skal hvert nafn á sinni eigin línu, og gefa svörin
+í sömu röð og svæðin eru gefin í inntaki.

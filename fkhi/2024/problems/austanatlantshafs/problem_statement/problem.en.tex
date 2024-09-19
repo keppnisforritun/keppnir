@@ -1,0 +1,53 @@
+\problemname{Austan Atlantshafs}
+\illustration{0.5}{2901}{Image by Randall Munroe, \href{https://xkcd.com/2901/}{xkcd.com}}
+
+Many cities and other institutions have a tendency to raise
+statues of various kinds to garner attention.
+In this context larger statues are of course preferable,
+as a larger statue garners more attention.
+It is even better when the statue is the largest in a large
+area around where it is raised.
+Each such institution wants to advertise its statue as
+``the largest statue in X'' where X is the largest named
+area which makes the statement true.
+For example if a statue were the largest in all of Europe,
+it would be a far better advertisement to claim it is the
+largest in all of Europe rather than it being the largest
+in Iceland, even though that would also be true if the
+statue were located in Iceland.
+Note that if, for example, Germany and France had equally
+large largest statues, neither of them would be the largest
+in all of Europe.
+
+\section*{Input}
+The first line of input contains a single integer $n$, the
+number of named areas, satisfying $1 \leq n \leq 100\,000$.
+Next there are $n$ lines, each describing one named area.
+The $i$-th line contains a string $s_i$, a string $t_i$ and
+a positive integer $x_i$, separated by spaces.
+$s_i$ gives the name of the $i$-th area and $t_i$ gives the 
+name of the area the $i$-th area is contained in.
+$t_i$ is always one one of the areas named in the input.
+$x_i$ then gives the height of the statue raised in the $i$-th area,
+where $1 \leq x_i \leq 10^9$ if there is a statue in that area
+and $x_i = -1$ otherwise.
+If the area contains smaller areas $x_i = -1$ will hold, but
+$x_i > 0$ otherwise.
+No two different areas have the same name.
+
+Each string in the input has length at most $20$ and
+contains only lowercase English letters.
+The total length of all strings in the input is at most
+$10^6$.
+
+The first area is always \texttt{jord}, which is given
+to contain itself. 
+No other area contains itself, directly or indirectly.
+
+\section*{Output}
+For each area with a statue, print the name of the largest
+area such that the statue is the largest statue in that area.
+An area is considered larger than another if it contains
+the other area.
+The names should be printed on separate lines, and given
+in the same order as the input.

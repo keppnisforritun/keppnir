@@ -1,0 +1,78 @@
+\problemname{Einfasa Eindahraðall}
+\illustration{0.5}{1862}{Image by Randall Munroe, \href{https://xkcd.com/1862/}{xkcd.com}}
+
+As was covered in the last contest, an Icelandic particle
+accelerator has been built. Since last time the accelerator
+has been converted to use single phase power, since according
+to some electrical engineer the other phases were
+interfering with measurements. The tin foil hat was an unusual
+fashion statement, but the machine works in any case. Now the
+only thing left is to process all the data it spits out.
+
+The particle accelerator, as the name suggests, accelerates
+particles. This is done to then smash particles together with
+great speed to create and analyse new and rare particles.
+These particles are described using various quantum
+properties, as shown on the image.
+
+By scaling things properly all of these quantum properties
+can be described by integer values, where each property has
+some minimum and maximum possible value, and can take every
+integer value there between.
+
+The particle accelerator spits out these quantum values
+for each particle it measures. Together these values
+determine the type of the particle, which is a sequence
+of integers, which uniquely determine the particle.
+But since the physicists are
+looking for specific particles given by string theory
+conjectures, the data has to be processed somewhat.
+
+For each conjecture the physicists have they want to know
+how many particles were measured that fit their description,
+meaning that each of its quantum properties fits in some
+given interval. For example if particles were given by
+charge, mass and flavour the physicists might want to know
+the number of particles with charge exactly $-3$, mass from
+$2$ to $5$ and flavour from $-1$ to $1$. An example of a
+particle type satisfying these bounds is $(-3, 4, 0)$.
+
+\section*{Input}
+The first line of input contains a positive integer $n$,
+the number of quantum properties the particle accelerator
+measures. You may assume $1 \leq n \leq 10$.
+Next there is a line with $n$ pairs of integers $l_i, r_i$
+where $l_i$ is the minimum value and $r_i$ is the maximum
+value of the $i$-th quantum property. The values are given
+in the order $l_1, r_1, l_2, r_2$ and so on, separated by
+spaces. You may assume $-10^9 \leq l_i \leq r_i \leq 10^9$
+for all $i$ and that the particles can only have at most
+$10^6$ different types in total.
+Next there is a line with a positive integer $p$, the number
+of particles the accelerator measured. You may assume
+that $1 \leq p \leq 10^5$.
+Next there are $p$ lines where the $i$-th lines describes
+the $i$-th particle measured.
+The $i$-th line contains $n$ values $x_j$ where $x_j$
+gives the value of the $j$-th quantum property of the
+$i$-th particle measured. It satisfies 
+$l_j \leq x_j \leq r_j$. This means the $i$-th line gives
+the type of the $i$-th particle measured.
+Next there is a line with a positive integer $q$, the
+number of conjectures from the physicists. You may assume
+$1 \leq q \leq 10^5$.
+Finally there are $q$ more lines where the $i$-th line
+describes the $i$-th conjecture.
+The $i$-th line contains $n$ pairs of integers $a_j, b_j$
+where $a_j$ is the minimum value and $b_j$ the maximum value
+the $j$-th quantum property can be. The values are given in
+the order $a_1, b_1, a_2, b_2$ and so on, separated by spaces.
+You may assume $-10^9 \leq a_j \leq b_j \leq 10^9$ for all
+$j$.
+
+\section*{Output}
+For each conjecture print a single integer on its own line,
+the number of particles in the input falling within the
+bounds of the conjecture for every quantum property. 
+Print the answers in the same order as the conjectures are
+given in the input.

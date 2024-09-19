@@ -1,0 +1,9 @@
+name: Höskuldarháska
+author: Atli Fannar Franklín
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "449725e0-7eec-4439-b012-4bd368ee8d4b"
+limits:
+    time_multiplier: 2
+keywords: brute-force complete-search

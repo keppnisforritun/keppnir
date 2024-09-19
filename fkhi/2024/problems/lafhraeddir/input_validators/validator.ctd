@@ -1,0 +1,39 @@
+INT(1, 500, l)
+SPACE
+INT(1, 500, e)
+NEWLINE
+REPI(i, e, NEWLINE)
+    REGEX("[a-z]+", ename[i])
+    ASSERT(STRLEN(ename[i]) <= 20)
+    SPACE
+    INT(1, 1000000000)
+    SPACE
+    INT(1, 1000000000)
+END
+ASSERT(UNIQUE(ename))
+NEWLINE
+REPI(i, l, NEWLINE)
+    REGEX("[a-z]+", lname[i])
+    ASSERT(STRLEN(lname[i]) <= 20)
+    ASSERT(!INARRAY(lname[i], ename))
+    SPACE
+    INT(1, 1000000000)
+    SPACE
+    INT(1, 1000000000)
+    SPACE
+    INT(0, 20, k)
+    IF(k != 0) 
+        SPACE
+    END
+    REPI(j, k, SPACE)
+        REGEX("[a-z]+", imm[j])
+        ASSERT(INARRAY(imm[j], ename))
+    END
+    IF(k != 0)
+        ASSERT(UNIQUE(imm))
+        UNSET(imm)
+    END
+END
+ASSERT(UNIQUE(lname))
+NEWLINE
+EOF

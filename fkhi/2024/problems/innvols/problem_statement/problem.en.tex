@@ -1,0 +1,32 @@
+\problemname{Innvolsarinnihaldslýsing}
+\illustration{0.5}{1706}{Image by Randall Munroe, \href{https://xkcd.com/1706/}{xkcd.com}}
+
+Ingfríður has grown curious about her internal content
+description. She heard that various properties of an 
+individual can be deduced from these data, so she has
+to try it. After getting the data sent over from the company Encode
+she has everything she needs. To analyse the data she
+needs to find sections that match known patterns, but
+if analysing some sections is good, analysing all sections
+must be better. Thus Ingfríður wants to analyse all sections.
+We define a section to be all characters in the data
+from some specific starting character to some ending
+character.
+
+\section*{Input}
+The input contains a single line giving the
+internal content description of Ingfríður. The description
+consists of the letters \texttt{A}, \texttt{C}, \texttt{G}
+and \texttt{T} and has no spaces.
+The description is at most $100$ letters in length.
+
+\section*{Output}
+For each section in the description print one line,
+the number of occurrences it has in the description and
+then the section itself, separated by spaces. A section
+should not be printed multiple times in the output even if
+it occurs multiple times. The lines should be printed in
+descending order by the number of occurrences. If two
+sections are tied for number of occurrences, resolve the
+tie by putting the section that comes first alphabetically
+before the other.

@@ -1,0 +1,9 @@
+name: Glötuð Gildi
+author: Atli Fannar Franklín
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "1048a523-9f44-44a1-911f-56ccca9a146c"
+limits:
+    time_multiplier: 2
+keywords: combinatorics dp counting

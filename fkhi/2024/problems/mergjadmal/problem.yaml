@@ -1,0 +1,9 @@
+name: Mergjað Mál
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "0d0096db-87e1-446f-925b-c80f4816af9b"
+limits:
+    time_multiplier: 2
+keywords: easy substring string

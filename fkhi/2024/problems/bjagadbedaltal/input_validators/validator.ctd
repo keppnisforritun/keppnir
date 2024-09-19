@@ -1,0 +1,9 @@
+INT(1, 100000, n)
+ASSERT(n % 2 == 1)
+NEWLINE
+REP(n, SPACE)
+    FLOATP(0, 1000000000, 0, 6, x)
+    ASSERT(x != 0)
+END
+NEWLINE
+EOF

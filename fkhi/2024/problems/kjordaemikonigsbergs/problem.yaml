@@ -1,0 +1,12 @@
+name: Kjördæmi Königsbergs
+author: Arnar Bjarni Arnarson
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "ceae5c2a-36f4-406f-8309-b636595b9e18"
+validation: custom
+validator_flags: weakly_connected
+limits:
+    time_multiplier: 2
+    output: 24
+keywords: graph constructive greedy

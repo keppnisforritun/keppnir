@@ -1,0 +1,56 @@
+\problemname{Fljúgandi Furðuhlutir Forðast Fókus}
+\illustration{0.5}{2572}{Image by Randall Munroe, \href{https://xkcd.com/2572/}{xkcd.com}}
+
+As is well known, the Earth is of course flat and is monitored
+by unscrupulous aliens who wish to make sure no one finds out
+about this secret flatness. To this end the aliens must make
+sure no one can get a clear picture of their spaceships.
+
+The aliens thus maintain a database of where each individual
+is located and the quality of their cameras.
+From this they can calculate a minimum radius they have to
+stay out of for any given individual. This however complicates
+the aliens travel plans significantly. If too many individuals
+obtain good cameras some travel plans might not just be slowed
+down but made outright impossible. Can you help determine when
+this occurs?
+Because of the unusual alien spaceship design all travel plans
+assume that the spaceships stay at a fixed height above the
+ground.
+
+\section*{Input}
+The first line of input contains a positive integer $n$,
+the number of individuals being monitored, and an integer
+$h$, the height above the ground at which the spaceship stays.
+Initially no one has a camera.
+You may assume that $1 \leq n \leq 5 \cdot 10^4$ and $0 \leq h \leq 10^9$.
+Next there are two lines describing the starting and desired
+ending position of the spaceship, each given
+by two integers giving the $x$ and $y$-coordinates,
+respectively.
+Next there are $n$ lines, each with two integers $x, y$.
+The $i$-th line gives the coordinates of the $i$-th
+individual.
+
+Next there is a line with a single positive integer $m$,
+the number of camera purchases.
+You may assume $1 \leq m \leq 10^5$.
+Then $m$ lines follow where the $i$-th line describes the $i$-th camera purchase.
+Each line contains an integer $j_i$,
+the index of the individual buying the camera,
+and an integer $r_i$ giving the corresponding minimum radius
+that the spaceship has to stay outside of.
+
+The minimum radius for a given individual is always given
+by the best camera they have access to.
+You may assume $1 \leq j_i \leq n$ and $1 \leq r_i \leq 10^9$.
+All coordinates in the input have a minimum value of
+$10^{-9}$ and a maximum value of $10^9$.
+
+\section*{Output}
+If the $i$-th camera purchase blocks the spaceship from
+being able to make it from the starting position to the
+target position print $i$. If it is possible to travel 
+between the starting and target location while staying outside of the cameras'
+views after all camera purchases, instead print $-1$.
+The purchases are made in the same order as they appear in the input.

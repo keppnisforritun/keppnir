@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.cpp opt
+
+compile random_generator.py
+compile coplanar_generator.py
+compile edge_generator.py
+
+sample 1
+sample 2
+sample 3
+
+tc one-pass edge_generator one-pass
+tc one-fail edge_generator one-fail
+
+for i in {01..05}; do
+    tc circle-small-A-$i random_generator circle 50 15
+    tc circle-small-B-$i random_generator circle 50 20
+    tc circle-small-C-$i random_generator circle 50 25
+
+    tc infty-small-A-$i random_generator infty 50 15
+    tc infty-small-B-$i random_generator infty 50 20
+    tc infty-small-C-$i random_generator infty 50 25
+
+    tc small-cluster-$i random_generator cluster 100
+done;
+
+tc dilkar-small-A random_generator dilkar 1000 0.0 
+tc dilkar-small-B random_generator dilkar 1000 0.001
+tc dilkar-small-C random_generator dilkar 1000 0.005
+
+tc coplanar coplanar_generator 0 0
+tc mostly-coplanar coplanar_generator 1 0
+tc tiny-coplanar coplanar_generator 0 1
+
+tc dilkar-big-A random_generator dilkar 10**5//2 0.0
+tc dilkar-big-C random_generator dilkar 10**5//2 0.005
+
+tc circle-big-B random_generator circle 10**5//2 80
+
+tc infty-big-C random_generator infty 10**5//2 100
+
+tc big-cluster random_generator cluster 10**5//2

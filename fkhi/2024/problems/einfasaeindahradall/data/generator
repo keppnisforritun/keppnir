@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+
+sample 1
+
+for i in {01..10}; do
+    tc tiny-rand-$i random_generator 100 100 1000 $i
+done;
+
+tc small-unique random_generator 500 500 1000 unique
+tc small-long random_generator 500 500 1000 long
+tc small-spread random_generator 500 500 1000 spread
+tc small-exact random_generator 500 500 1000 exact
+tc small-factorial random_generator 500 500 100 factorial
+
+for i in {01..10}; do
+    tc small-rand-$i random_generator 500 500 1000000 $i
+done;
+
+tc big-spread random_generator 100000 100000 1000000 spread
+tc big-exact random_generator 100000 100000 1000000 exact
+tc big-factorial random_generator 100000 100000 1000000 factorial
+tc big-rand random_generator 100000 100000 1000000 10

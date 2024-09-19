@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.cpp opt
+
+compile random_generator.py
+compile edge_generator.py
+
+sample 1
+
+tc le_one edge_generator leone
+tc max_days edge_generator maxdays
+tc full_immunity edge_generator fullimmunity
+
+for i in {1..4}; do
+    tc rand-short-LE-$i random_generator 500 500 10**1 $i
+    tc rand-med-LE-$i   random_generator 500 500 10**4 $i
+    tc rand-long-LE-$i  random_generator 500 500 10**9 $i
+    tc rand-short-L-$i random_generator 500 50 10**1 $i
+    tc rand-med-L-$i   random_generator 500 50 10**4 $i
+    tc rand-long-L-$i  random_generator 500 50 10**9 $i
+    tc rand-short-E-$i random_generator 50 500 10**1 $i
+    tc rand-med-E-$i   random_generator 50 500 10**4 $i
+    tc rand-long-E-$i  random_generator 50 500 10**9 $i
+done;

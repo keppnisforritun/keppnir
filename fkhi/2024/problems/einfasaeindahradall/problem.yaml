@@ -1,0 +1,9 @@
+name: Einfasa Eindahraðall
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "45eefa4b-d788-4cec-9498-fab5ecc145b1"
+limits:
+    time_multiplier: 3
+keywords: prefix_sum gray_code

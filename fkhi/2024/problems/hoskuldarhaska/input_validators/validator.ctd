@@ -1,0 +1,19 @@
+INT(1, 100, n)
+NEWLINE
+SET(l = 0)
+REP(n, NEWLINE)
+    SET(s[0] = "@")
+    INT(1, 100, k)
+    SPACE
+    REP(k, SPACE)
+        REGEX("[a-zA-Z]+", t)
+        ASSERT(!INARRAY(t, s))
+        SET(s[k] = t)
+        SET(l = l + STRLEN(s[k]))
+        ASSERT(STRLEN(s[k]) <= 20)
+    END
+    UNSET(s)
+END
+ASSERT(l <= 100000)
+NEWLINE
+EOF

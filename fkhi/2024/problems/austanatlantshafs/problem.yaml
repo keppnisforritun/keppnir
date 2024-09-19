@@ -1,0 +1,9 @@
+name: Austan Atlantshafs
+author: Atli Fannar Franklín
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "ead786f4-cf81-4c17-99c7-c540f66f6e4d"
+limits:
+    time_multiplier: 2
+keywords: binary_jump dfs

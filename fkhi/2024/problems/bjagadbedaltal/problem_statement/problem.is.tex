@@ -1,0 +1,41 @@
+\problemname{Bjagað Beðaltal}
+\illustration{0.5}{2435}{Mynd eftir Randall Munroe, \href{https://xkcd.com/2435/}{xkcd.com}}
+
+Eftir lok hverrar forritunarkeppni þarf að taka saman gögn
+til að sýna keppendum skemmtilegar staðreyndir um hvernig
+keppendum gekk að leysa dæmin. Oft er verið að skoða hversu
+margir leystu dæmi að meðaltali, eða hversu margar tilraunir
+þurfti til þess að meðaltali.
+En venjulegt meðaltal er svo óspennandi, heyrðist einhver
+segja á tölfræðistofunni. 
+Til þess að keppnin sé nægilega spennandi fyrir tölfræðingana
+er ákveðið að nota nýja spennandi leið til að reikna
+meðaltal $n$ talna.
+Frekar en að fylgja fordæmi Hölders og alhæfa meðaltöl á
+gáfulegan hátt, er ákveðið að fylgja fordæmi Randall Munroe.
+Þar kemur rúmjulega miðtalið til sögunnar.
+Eins og myndin gefur til kynna er rúmjulega miðtalið
+reiknað með eftirfarandi hætti:
+
+Látum $n$ vera oddatölu.
+Runu af tölum $x_1, x_2, \dots, x_n$ er raðað og þá fæst runan $y_1, y_2, \dots, y_n$.
+Upprunalegu rununni er svo skipt út fyrir
+\[
+    n^{-1}\sum_{i = 1}^n y_i, \sqrt[n]{\prod_{i = 1}^n y_i}, y_{(n + 1)/2}
+\]
+Þetta er svo endurtekið fyrir nýju rununa sem leiðir til annarrar runu.
+Ef endurtekningin er framkvæmd óendanlega oft stefnir runan á endurtekningu af sama gildinu, og
+það endurtekna gildi er rúmjulega miðtalið.
+
+\section*{Inntak}
+
+Inntakið byrjar á einni odda heiltölu $1 \leq n \leq 10^5$.
+Á næstu línu fylgja $n$ rauntölur $x_1, \dots, x_n$.
+Fyrir öll $i$ gildir $0 < x_i \leq 10^9$.
+Öll gildin verða með mest $6$ stafi eftir kommu.
+
+\section*{Úttak}
+
+Prentið rúmjulega miðtal $x_1, \dots, x_n$.
+Svar telst rétt ef hlutfallsleg eða bein skekkja þess
+frá réttu svari er mest $10^{-5}$.

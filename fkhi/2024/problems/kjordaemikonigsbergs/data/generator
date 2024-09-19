@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution hh_multiset_connected.cpp opt
+
+compile complete_graph.py
+compile fixed.py
+compile random_generator.py
+compile bounded_generator.py
+compile edge_case_generator.py
+
+sample 1
+sample 2
+
+# Skip n=0 case
+# tc GA-001 fixed 0
+tc GA-002 fixed 1 0
+tc GA-003 fixed 1 1
+tc GA-004 fixed 2 0 0
+tc GA-005 fixed 2 0 1
+tc GA-006 fixed 2 0 2
+tc GA-007 fixed 2 1 0
+tc GA-008 fixed 2 1 1
+tc GA-009 fixed 2 1 2
+tc GA-010 fixed 2 2 0
+tc GA-011 fixed 2 2 1
+tc GA-012 fixed 2 2 2
+tc GA-013 fixed 3 0 0 0
+tc GA-014 fixed 3 0 0 1
+tc GA-015 fixed 3 0 0 2
+tc GA-016 fixed 3 0 1 1
+tc GA-017 fixed 3 0 1 2
+tc GA-018 fixed 3 0 2 2
+tc GA-019 fixed 3 1 1 1
+tc GA-020 fixed 3 1 1 2
+tc GA-021 fixed 3 1 2 2
+tc GA-022 fixed 3 2 2 2
+tc GA-023 fixed 4 0 0 0 0
+tc GA-024 fixed 4 1 1 1 1
+tc GA-025 fixed 4 1 1 1 2
+tc GA-026 fixed 4 1 1 1 3
+tc GA-027 fixed 4 1 1 2 2
+tc GA-028 fixed 4 1 1 2 3
+tc GA-029 fixed 4 1 1 3 3
+tc GA-030 fixed 4 1 2 2 2
+tc GA-031 fixed 4 1 2 2 3
+tc GA-032 fixed 4 1 2 3 3
+tc GA-033 fixed 4 1 3 3 3
+tc GA-034 fixed 4 2 2 2 2
+tc GA-035 fixed 4 2 2 2 3
+tc GA-036 fixed 4 2 2 3 3
+tc GA-037 fixed 4 2 3 3 3
+tc GA-038 fixed 4 3 3 3 3
+
+for i in {039..050}; do
+tc GA-$i bounded_generator 5 6 0 15 1 5
+done;
+tc GA-complete complete_graph 6 6
+
+for i in {001..020}; do
+tc GB-$i bounded_generator 7 100 0 5000 1 99
+done;
+tc GB-complete complete_graph 100 100
+
+for i in {001..020}; do
+tc GC-$i bounded_generator 101 1000 0 500000 1 1000
+done;
+tc GC-complete complete_graph 632 632
+
+for i in {001..010}; do
+tc GD-$i bounded_generator 1001 10000 0 1000000 1 1000
+done;
+for i in {011..020}; do
+tc GD-$i bounded_generator 10001 100000 0 1000000 1 1000
+done;
+tc GD-count-gap edge_case_generator count-gap

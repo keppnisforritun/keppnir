@@ -1,0 +1,40 @@
+\problemname{Jaðarjuð}
+\illustration{0.5}{2483}{Mynd eftir Randall Munroe, \href{https://xkcd.com/2483/}{xkcd.com}}
+
+Síðustu ár hefur verið umræða um að sameina suma
+háskóla á Íslandi. Nú er loks verið að leggja drög að því
+hvernig mætti fara að því, en til að smíða góð plön þarf
+skipulagsnefndin að geta fengið upplýsingar um hvernig
+ferlið myndi fara jafn óðum. Eftir að hafa frétt af
+þessarri forritunarkeppni og tuðað einstaklega lengi í
+dómnefnd hennar er samþykkt að láta keppendur sjá um þetta
+mátulega skemmtilega verk.
+
+\section*{Inntak}
+
+Inntakið byrjar á línu með tveimur heiltölum $n$, fjöldi
+háskóla, og $q$ sem gefur fjölda aðgerða.
+Gefið er að $1 \leq n, q \leq 5 \cdot 10^5$.
+Næst koma $q$ línur þar sem hver þeirra lýsir einni aðgerð.
+Hver þeirra byrjar á einum staf sem er \texttt{j},
+\texttt{u} eða \texttt{p}. Ef línan byrjar á \texttt{j}
+koma næst tvær tölur $1 \leq a, b \leq n$ með $a \neq b$
+sem gefur að sameina eigi háskóla $a$ og háskóla $b$.
+Ef línan byrjar á \texttt{u} á að afturkalla síðustu
+sameiningu. Ef engin sameining er til staðar til að afturkalla
+skal aðgerðin gera ekkert. Loks ef línan byrjar á \texttt{p} kemur
+næst ein heiltala $1 \leq a \leq n$ og prenta á þá númer
+allra háskóla sem búið er að sameina við háskóla númer $a$,
+með $a$ sjálfum meðtöldum.
+Athugið að ef $a$ er sameinað við $b$ og $b$ við $c$ þá
+teljum við sem svo að $a$ hafi sameinast við $c$.
+
+\section*{Úttak}
+
+Fyrir hverja aðgerð sem byrjar á \texttt{p} á að prenta
+eina línu af heiltölum eins og lýst er að ofan.
+Tölurnar skulu vera aðskilnar með bilum, en prenta má
+tölurnar í hvaða innbyrðis röð sem er á línunni.
+Prenta á línurnar í sömu röð og aðgerðirnar eru gefnar
+í inntaki.
+Gefið er að mest þurfi að prenta $10^6$ tölur.

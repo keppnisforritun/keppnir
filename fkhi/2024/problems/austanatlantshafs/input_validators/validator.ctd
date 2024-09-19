@@ -1,0 +1,25 @@
+INT(1, 100000, n)
+NEWLINE
+SET(l = 0)
+REPI(i, n, NEWLINE) 
+    REGEX("[a-z]+", s[i])
+    SPACE
+    REGEX("[a-z]+", t[i])
+    SPACE
+    IF(i == 0)
+        ASSERT(s[i] == "jord")
+        ASSERT(t[i] == "jord")
+    ELSE 
+        ASSERT(s[i] != "jord")
+    END
+    INT(-1, 1000000000, x[i])
+    ASSERT(x[i] != 0)
+    ASSERT(STRLEN(s[i]) <= 20)
+    ASSERT(STRLEN(t[i]) <= 20)
+    SET(l = l + STRLEN(s[i]))
+    SET(l = l + STRLEN(t[i]))
+END
+ASSERT(UNIQUE(s))
+ASSERT(l <= 1000000)
+NEWLINE
+EOF

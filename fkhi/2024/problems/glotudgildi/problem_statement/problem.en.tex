@@ -1,0 +1,39 @@
+\problemname{Glötuð Gildi}
+\illustration{0.5}{544}{Image by Randall Munroe, \href{https://xkcd.com/544/}{xkcd.com}}
+
+The universities of Iceland have decided to host a large
+Nim tournament.
+Exactly $n$ teams have registered, and each team will compete
+exactly once against every other team.
+As is well known there are no ties in Nim,
+so in each game there is exactly one winning team which
+receives $1$ point.
+At the end the scores of every team have been collected,
+but in all the excitement the actual results of individual
+games got lost!
+This is not good, so Jörmunrekur is going to try to guess
+what the results looked like.
+The odds that he guesses right are then dependant on the
+number of ways the tournament could have gone.
+Thus this needs to be calculated as soon as possible!
+
+Consider for example a tournament with teams $A, B, C$
+and final scores $1, 1, 1$.
+Possibly $A$ beat $B$, $B$ beat $C$ and $C$ beat $A$.
+But it could also be that $A$ beat $C$, $C$ beat $B$ and
+$B$ beat $A$.
+We can see that these are the only options, so in this case
+the answer would be $2$.
+
+\section*{Input}
+
+The input begins with a single integer $0 \leq n \leq 16$.
+On the next line there are $n$ integers, each also at least
+$0$ and at most $16$.
+The $i$-th integer denotes the score of the $i$-th team.
+
+\section*{Output}
+
+Print the number of ways the tournament could have gone.
+Two ways are considered different if some team beat another
+in one way, but not in the other.

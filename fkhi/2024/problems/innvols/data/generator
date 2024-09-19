@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar.cpp
+
+compile pattern_generator.py
+compile random_generator.py
+
+sample 1
+sample 2
+sample 3
+
+for c in {A,C,G,T}; do
+    tc pattern-$c-1 pattern_generator 1 1 $c
+    tc pattern-$c-100 pattern_generator 100 100 $c
+done
+
+
+for c in {A,C,G,T}; do
+    for d in {A,C,G,T}; do
+        tc pattern-$c$d-2 pattern_generator 2 2 $c$d
+    done
+done
+
+tc pattern-CAT-99 pattern_generator 99 99 CAT
+tc pattern-superperm4-33 pattern_generator 33 33 ACGTACGATCGACTGACAGTCAGCTAGCATGCA
+tc pattern-superperm4-66 pattern_generator 66 66 ACGTACGATCGACTGACAGTCAGCTAGCATGCA
+tc pattern-superperm4-99 pattern_generator 99 99 ACGTACGATCGACTGACAGTCAGCTAGCATGCA
+tc pattern-superperm4-overlap-100 pattern_generator 100 100 ACGTACGATCGACTGACAGTCAGCTAGCATGC
+
+for i in {01..20}; do
+    tc random-$i random_generator 2 100
+done

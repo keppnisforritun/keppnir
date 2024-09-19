@@ -1,0 +1,34 @@
+INT(1, 10, n)
+NEWLINE
+SET(o = 1)
+REPI(i, n, SPACE)
+    INT(-1000000000, 1000000000, l[i])
+    SPACE
+    INT(-1000000000, 1000000000, r[i])
+    SET(o = o * (r[i] - l[i] + 1))
+    ASSERT(l[i] <= r[i])
+END
+ASSERT(o <= 1000000)
+NEWLINE
+INT(1, 100000, p)
+NEWLINE
+REP(p, NEWLINE)
+    REPI(i, n, SPACE)
+        INT(-1000000000, 1000000000, x)
+        ASSERT(l[i] <= x)
+        ASSERT(x <= r[i])
+    END
+END
+NEWLINE
+INT(1, 100000, q)
+NEWLINE
+REP(q, NEWLINE)
+    REPI(i, n, SPACE)
+        INT(-1000000000, 1000000000, a)
+        SPACE
+        INT(-1000000000, 1000000000, b)
+        ASSERT(a <= b)
+    END
+END
+NEWLINE
+EOF

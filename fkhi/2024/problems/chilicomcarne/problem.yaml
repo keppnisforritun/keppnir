@@ -1,0 +1,9 @@
+name: Chili COM Carne
+author: Arnar Bjarni Arnarson
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "9a5d90c5-03f6-4fbb-92de-bb47707d93ac"
+limits:
+    time_multiplier: 2
+keywords: parsing arithmetic

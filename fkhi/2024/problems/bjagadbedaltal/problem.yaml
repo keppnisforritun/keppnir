@@ -1,0 +1,10 @@
+name: Bjagað Beðaltal
+author: Atli Fannar Franklín
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "a8d5606f-2f9f-4af0-958f-d9e2bc04aec3"
+validator_flags: float_tolerance 1e-5
+limits:
+    time_multiplier: 2
+keywords: ad-hoc numerical

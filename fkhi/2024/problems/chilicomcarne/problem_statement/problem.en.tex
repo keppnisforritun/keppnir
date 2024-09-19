@@ -1,0 +1,61 @@
+\problemname{Chili COM Carne}
+\illustration{0.5}{1205}{Image by Randall Munroe, \href{https://xkcd.com/1205/}{xkcd.com}}
+
+Programmers all know COM, which is of course an abbreviation
+for Cost Of Maintenance and has no other interpretations.
+Often such costs can be lowered by automating certain tasks,
+but many programmers are overzealous in this regard and
+end up spending more time programming an automatic solution
+than it would have taken them to do the task by hand for
+the rest of their lives.
+
+To rectify this a program has to be made that can 
+automatically determine whether it is worth it to write
+a program to automate things. As this program does not yet
+exist we can't say whether it's worth it to write this
+program, so that'll just have to be revealed in due time.
+
+We measure time using a few different units, with the largest
+one being a year. A single year has $52$ weeks. Each week
+has $5$ work days and each work day has $8$ work hours.
+Finally there are of course $60$ minutes to an hour and
+$60$ seconds to a minute.
+
+Given how often the task has to be done, how long it takes
+to do it, and how long it would take to automate it, make a
+program that can tell how much time it would save to
+automate the task over the course of the next five years.
+The saved time is measured starting from the program being
+finished.
+
+\section*{Input}
+The first line gives how often the task needs to be performed,
+given as \texttt{n sinnum daglega} where $n$ is an integer
+and \texttt{daglega} means daily. If $n$ is one the second
+word is replaced with \texttt{sinni}. The third word can
+also be \texttt{vikulega} which means weekly or
+\texttt{arlega} which means yearly.
+The next line gives how long it takes to perform the
+task each time, given as \texttt{n sekundur} where $n$
+is an integer and \texttt{sekundur} means seconds.
+Instead of \texttt{sekundur} the second word can also
+be \texttt{minutur} (minutes), \texttt{klukkustundir}
+(hours), \texttt{dagar} (days), \texttt{vikur} (weeks),
+\texttt{ar} (years).
+If $n = 1$ the input contains the singular form of the word
+instead, i.e. one of \texttt{sekunda}, \texttt{minuta},
+\texttt{klukkustund}, \texttt{dagur}, \texttt{vika} or
+\texttt{ar}, given in the same order as above.
+Finally the third and last line gives how much time it
+would take to automate the task, given in the same format
+as the line before.
+$n$ is always a positive integer with value at most $10$.
+Note that since the task might be taken care of by more than
+a single person it is possible that it takes more than five
+years to perform the task over the next five years in total.
+
+\section*{Output}
+Print the number of seconds the program would save over $5$
+years. If automating the task takes strictly more time than
+doing the task manually over the next $5$ years, instead print
+\texttt{Borgar sig ekki!}.

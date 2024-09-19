@@ -1,0 +1,51 @@
+\problemname{Lafhræddir Læknar}
+\illustration{0.5}{2161}{Mynd eftir Randall Munroe, \href{https://xkcd.com/2161/}{xkcd.com}}
+
+Eftir því sem nýi landspítalinn kemst nær og nær því að vera
+fullbyggður verða læknarnir djarfari. Þeir hafa sést ferðast
+út fyrir gömlu hringbrautina og jafnvel alla leið hjá
+votlendinu kringum flugvöllinn. Þetta veldur áhyggjum hjá
+bæði Háskóla Íslands og Háskóla Reykjavíkur, klárlega
+þarf að halda þessu fólki í skefjum. 
+
+Sem betur fer, eins og vel er þekkt, er hægt að halda læknum
+burtu með eplum. Nánar tiltekið þarf eitt epli á dag fyrir
+hvern lækni. Áður var hægt að leysa þetta verkefni gráðugt,
+versta eplið sem dugði fyrir tiltekinn lækni var notað til að
+halda lækninum burt og það endurtekið fyrir hvern lækni.
+En nú eru sumir læknar komnir með eplaónæmi og duga því ekki
+hvaða epli sem er lengur.
+
+Að eplaónæmi læknanna og eplabirgðastöðu háskólanna gefnum,
+getur þú svarað hversu marga daga er hægt að halda læknunum
+í skefjum?
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær jákvæðar heiltölur,
+$L$ sem gefur fjölda tegunda lækna og $E$ sem gefur fjölda
+tegunda epla.
+Gera má ráð fyrir að $1 \leq L, E \leq 500$.
+Næstu $E$ línur lýsa eplategundunum. Hver lína inniheldur
+nafn eplategundarinnar, styrk eplategundarinnar og loks
+hversu mörg slík epli háskólarnir eiga til.
+Styrkurinn er jákvæð heiltala jöfn í mesta lagi $10^9$.
+Eins eiga háskólarnir jákvæðan heiltölufjölda af hverri
+eplategund, mest $10^9$ af hverri tegund.
+Svo koma $L$ línur sem lýsa læknategundunum.
+Hver lína inniheldur nafn læknategundarinnar, styrk
+læknategundarinnar, hvað eru margir læknar af þeirri
+tegund, hversu margar eplategundir tegundin
+hún er ónæm fyrir og loks nöfn þeirra eplategunda.
+Eins og með eplin er styrkurinn og fjöldinn bæði
+jákvæðar heiltölur jöfn mesta lagi $10^9$.
+Hver læknategund er ónæm fyrir mest $20$ eplategundum.
+Öll nöfn í inntaki eru strengir sem innihalda bara
+enska lágstafi með engum bilum. Öll nöfn eru mest
+$20$ stafir að lengd. Öll nöfn eru ólík.
+
+\section*{Úttak}
+Prentið fjölda daga sem hægt er að halda læknunum í skefjum.
+Það er að segja ef hægt er að úthluta hverjum lækni $d$ epli
+sem er með styrk sem er ekki lægri en styrkur læknisins og
+læknirinn er ekki ónæmur fyrir, en slíkt hið sama gildir ekki
+um $d + 1$, prentið $d$.

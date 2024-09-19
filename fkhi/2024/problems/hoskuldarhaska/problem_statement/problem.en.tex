@@ -1,0 +1,45 @@
+\problemname{Höskuldarháska}
+\illustration{0.5}{2243}{Image by Randall Munroe, \href{https://xkcd.com/2243/}{xkcd.com}}
+
+FKHÍ's continuous integration system performs many tasks.
+Ensures input data is formatted correctly,
+looks for typos in problem statements and more.
+After having made a reference to a popular movie in the
+last contest and spoiled an important plot point for those
+who had not seen it yet, the organisers have decided to
+add a spoiler filtering program into the integration system.
+The spoiler filtering program should analyse all text in
+the contest data files and make sure there is no text
+spoiling important plot points that people would rather
+not have spoiled. But to create such a system one needs
+to determine what text is a spoiler, so the program knows
+what it is looking for. Thus your task is to create a text
+file containing all possible spoilers.
+
+All possible first words of a spoiler have been determined,
+same for all possible second words and so on.
+Thus the only task left is to generate all possible 
+combinations of these words to prepare the text file.
+
+\section*{Input}
+
+The input begins with a single integer $1 \leq n \leq 100$,
+the number of words in each spoiler.
+$n$ lines follow, one for each word.
+The $i$-th line begins with an integer $1 \leq k \leq 100$,
+the number of options for the $i$-th word.
+Next these $k$ words follow on the same line, separated by
+spaces. These $k$ words are distinct from each other.
+All words in the input only contain English lower and upper
+case characters.
+Each word is at least $1$ letter and at most $20$ letters
+in length.
+
+\section*{Output}
+
+Print all possible ways to combine the words into a spoiler.
+Each spoiler should be on its own line.
+The spoilers are to be printed in ASCII-order (note that this
+is the default order in most programming languages).
+It is guaranteed that the output will contain at most
+$10^6$ letters.

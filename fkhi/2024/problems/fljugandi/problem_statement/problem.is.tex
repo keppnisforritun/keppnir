@@ -1,0 +1,52 @@
+\problemname{Fljúgandi Furðuhlutir Forðast Fókus}
+\illustration{0.5}{2572}{Mynd eftir Randall Munroe, \href{https://xkcd.com/2572/}{xkcd.com}}
+
+Eins og vel er þekkt er jörðin flöt og geimverur fylgjast með
+öllu sem gert er til þess að sjá til þess að enginn komist
+að þessarri flatneskju. Til þess þurfa geimverurnar að sjá
+til þess að aldrei náist skýr ljósmynd af geimskipum þeirra.
+
+Geimverurnar halda því utan um gögn hvar hver einstaklingur
+heldur sér og hversu góðar myndavélar þeirra eru.
+Út frá þessu geta geimverurnar ákveðið lágmarksradíus sem
+þarf að halda sig utan frá hverjum einstaklingi. Þetta
+flækir hins vegar ferðaplön geimveranna töluvert. Ef of
+margir eru komnir með góðar myndavélar geta sum ferðaplön
+ekki bara lengst heldur orðið ómöguleg eins og þau leggja sig.
+Getur þú hjálpað við að ákvarða hvenær þetta gerist?
+Vegna undarlegrar hönnunar geimskipanna gera öll ferðaplön
+ráð fyrir að geimskipið haldi sér í fastri hæð.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur jákvæða heiltölu $n$,
+fjöldi einstaklinga sem fylgst er með, og heiltölu $h$,
+hæðin yfir jörðu sem geimskipið heldur sig í. 
+Upphaflega er enginn með myndavél.
+Gefið er að $1 \leq n \leq 5 \cdot 10^4$ og $0 \leq h \leq 10^9$.
+Næst koma tvær línur sem lýsa upphafs- og lokastaðsetningum
+geimskipsins með $x$-hnitum og svo $y$-hnitum sem eru báðar
+heiltölur.
+Næst koma $n$ línur, hver með $x$-hniti og $y$-hniti sem
+eru báðar heiltölur. $i$-ta línan gefur staðsetningu
+$i$-ta einstaklingsins.
+
+Næst kemur lína með einni jákvæðri heiltölu $m$, 
+fjöldi myndavélakaupa.
+Gefið er að $1 \leq m \leq 10^5$.
+Loks fylgja $m$ línur þar sem $i$-ta línan lýsir $i$-tu
+myndavélakaupin.
+Hver lína inniheldur heiltölu $j_i$, númer einstaklingsins
+sem keypti myndavélina, og heiltölu $r_i$,
+sem gefur lágmarksradíusinn sem geimskipið þarf að halda sér utan.
+
+Lágmarksradíusinn fyrir tiltekinn einstakling er ávallt
+ákvarðaður út frá bestu myndavélinni sem hann hefur aðgang að.
+Gefið er að $1 \leq j_i \leq n$ og $1 \leq r_i \leq 10^9$.
+Öll hnit í inntaki eru minnst $-10^{9}$ og mest $10^9$.
+
+\section*{Úttak}
+Ef að frá og með $i$-tu myndavélakaupum er ekki lengur hægt
+að komast frá upphafspunkti til endapunkts skal prenta $i$.
+Annars ef enn er hægt að komast milli upphafs- og lokastaðsetningar eftir öll myndavélakaup skal í staðinn
+prenta $-1$.
+Kaupin eru framkvæmd í sömu röð og þau koma fyrir í inntakinu.

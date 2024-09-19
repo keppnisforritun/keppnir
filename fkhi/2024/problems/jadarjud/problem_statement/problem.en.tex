@@ -1,0 +1,44 @@
+\problemname{Jaðarjuð}
+\illustration{0.5}{2483}{Image by Randall Munroe, \href{https://xkcd.com/2483/}{xkcd.com}}
+
+For the last few years, the prospect of merging some of the
+universities of Iceland has been considered. Finally,
+some actual plans are being drawn about how this could be
+implemented, but in order to make good plans the organising committee
+needs some data on how the plans are looking thus far as
+they plan it out. After hearing about this programming contest
+and nagging the jury incessantly, it is decided that the
+contestants can take care of this not at all tedious task.
+
+\section*{Input}
+
+The input begins with a line containing two integers, $n$
+which gives the number of universities and $q$ which gives
+the number of operations. 
+You may assume that $1 \leq n, q \leq 5 \cdot 10^5$.
+Next there are $q$ lines, each giving one operation.
+They each begin with one of the letters \texttt{j},
+\texttt{u} or \texttt{p}. If the line begins with 
+\texttt{j} it is followed by two integers $1 \leq a, b
+\leq n$ with $a \neq b$. This means university number $a$
+and university number $b$ should be merged. If the line
+begins with \texttt{u} the last merger should be reversed.
+If no merger is available to be undone, the operation should
+do nothing.
+Finally if the line begins with \texttt{p} a single integer
+$1 \leq a \leq n$ follows, and all universities currently
+merged with university number $a$ should be printed
+on a single line, including $a$ itself. Note that if $a$ is merged with $b$
+and $b$ merged with $c$, $a$ will be considered to have
+been merged with $c$.
+
+\section*{Output}
+
+For each operation starting with a \texttt{p} a line
+should be printed, as described above. The integers on
+the line should be separated by spaces, but they can be
+printed in any internal order. The lines themselves should
+be printed in the same order as the operations are given in
+the input.
+You may assume you will not have to print more than $10^6$
+numbers.

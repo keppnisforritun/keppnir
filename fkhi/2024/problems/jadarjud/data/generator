@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.cpp opt
+
+compile random_generator.py
+compile edge_generator.py
+
+sample 1
+
+tc min-n edge_generator 0 0 minn
+tc test-nop edge_generator 0 0 testnop
+
+for i in {01..20}; do
+tc small-rand-$i random_generator 100 500
+done;
+
+tc big-maxn-rand random_generator 500000 500000
+tc big-medn-rand random_generator 80000 500000
+tc big-bst edge_generator 131072 500000 bst

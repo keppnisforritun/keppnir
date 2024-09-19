@@ -1,0 +1,57 @@
+\problemname{Chili COM Carne}
+\illustration{0.5}{1205}{Mynd eftir Randall Munroe, \href{https://xkcd.com/1205/}{xkcd.com}}
+
+Forritarar þekkja allir COM, sem stendur auðvitað fyrir
+Cost Of Maintenance, og ekkert annað.
+Oft er hægt að halda slíkum kostnaði niðri með því að láta
+tölvur sjá um viss verk, en margir forritarar eru aðeins
+of æstir í að ganga í slíkt og enda með því að eyða meiri
+tíma í að forrita tölvuna til að sjá um verkefnið en það
+hefði tekið að gera það handvirkt út alla ævi.
+
+Því þarf nú að búa til forrit sem sjálfkrafa sér um að
+ákvarða hvort það sé þess virði að skrifa forrit sem gerir
+hluti sjálfkrafa. Þar sem þetta forrit er ekki til ennþá er
+ekki víst hvort það sé þess virði að skrifa það, en það verður
+bara að koma í ljós.
+
+Við mælum tímann okkar í nokkrum einingum þar sem stærsta
+einingin eru ár. Í einu ári eru svo $52$ vikur. Í hverri
+viku eru $5$ vinnudagar, og í hverjum vinnudag eru $8$
+vinnustundir. Loks eru náttúrulega $60$ mínútur í hverri
+klukkustund og $60$ sekúndur í hverri mínútu.
+
+Að því gefnu hversu oft þarf að sinna verkefninu, hvað það
+tekur langan tíma að sinna því, og hversu lengi tæki að
+búa til forrit sem sér um það sjálfkrafa þarf þá að segja
+hversu mikinn tíma það gæti sparað eftir fimm ár. 
+Sparnaðurinn er mældur frá og með að forritið er tilbúið.
+
+\section*{Inntak}
+Fyrsta línan gefur hversu oft þarf að sinna verkefninu
+á forminu \texttt{n sinnum daglega}. Ef $n$ er $1$ stendur
+\texttt{sinni} í staðinn fyrir \texttt{sinnum}. Í staðinn
+fyrir \texttt{daglega} getur einnig staðið \texttt{vikulega}
+eða \texttt{arlega} (árlega).
+Næsta lína gefur hversu langan tíma það tekur að sinna
+verkefninu á forminu \texttt{n sekundur}. Í staðinn fyrir
+\texttt{sekundur} getur einnig staðið \texttt{minutur},
+\texttt{klukkustundir}, \texttt{dagar}, \texttt{vikur},
+\texttt{ar} (ár). Ef $n = 1$ kemur eintöluform orðsins í
+staðinn, s.s. eitt af \texttt{sekunda}, \texttt{minuta},
+\texttt{klukkustund}, \texttt{dagur}, \texttt{vika} eða
+\texttt{ar} (óbreytt).
+Loks fylgir þriðja og síðasta línan sem gefur hversu langan
+tíma tekur að búa til forrit sem sér um verkefnið sjálfkrafa.
+Þetta er gefið á sama formi og línan á undan.
+$n$ er jákvæð heiltala jöfn í mesta lagi $10$ í
+öllum tilfellum að ofan.
+Athugum að þar sem fleiri en ein manneskja getur sinnt
+verkefninu er mögulegt að það taki samtals meir en fimm ár 
+að sinna verkefninu næstu fimm árin.
+
+\section*{Úttak}
+Prenta skal fjölda sekúndna sem forritið myndi spara yfir $5$
+ár. Ef það að skrifa forritið tekur lengri tíma en að gera
+verkefnið handvirkt næstu $5$ ár skal í staðinn prenta
+\texttt{Borgar sig ekki!}.

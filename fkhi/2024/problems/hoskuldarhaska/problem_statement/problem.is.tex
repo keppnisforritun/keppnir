@@ -1,0 +1,43 @@
+\problemname{Höskuldarháska}
+\illustration{0.5}{2243}{Mynd eftir Randall Munroe, \href{https://xkcd.com/2243/}{xkcd.com}}
+
+Sísamrásunarferli FKHÍ gerir ýmislegt. 
+Tryggir að inntaksgögn séu á tilgreindu formi, 
+leitar að stafsetningarvillum í dæmalýsingu og fleira.
+Eftir að hafa gert tilvísun í vinsæla mynd í síðustu keppni
+og skemmt spennu myndarinnar fyrir þá sem höfðu ekki séð hana
+var ákveðið að bæta við nýrri virkni í ferlið.
+Höskuldarviðvörunarkerfið á að fara yfir allan texta í 
+keppnisgögnum og sjá til þess að þar sé ekki verið að skemma
+fyrir neinum með því að segja frá mikilvægum atriðum í 
+söguþráðum sem fólk vill ekki heyra.
+En til þess að koma þessu á koppinn þarf að ákvarða hvaða
+texta eigi að leita að nákvæmlega.
+Því stendur nú það verk fyrir þér að búa til textaskrá
+af öllum mögulegum spillandi textum.
+
+Það er búið að ákvarða öll möguleg fyrstu orð í slíkum texta,
+öll möguleg önnur orð og svo framvegis.
+Því þarf einungis að framleiða allar mögulegar samsetningar
+þessarra orða til að undirbúa textaskrána.
+
+\section*{Inntak}
+
+Inntakið byrjar á einni heiltölu $1 \leq n \leq 100$,
+fjöldi orða í hverri línu úttaksins.
+Næst fylgja $n$ línur, ein lína fyrir hvert orð.
+$i$-ta línan byrjar á einni heiltölu $1 \leq k \leq 100$,
+fjöldi valkosta fyrir $i$-ta orðið.
+Næst koma svo þessi $k$ orð á sömu línu, aðskilin með bilum.
+Þessi $k$ orð eru ávallt ólík hvorum öðrum.
+Öll orð í inntakinu innihalda aðeins enska há- og lágstafi.
+Sérhvert orð er minnst $1$ stafur og mest $20$ stafir.
+
+\section*{Úttak}
+
+Prenta skal allar mögulegar leiðir til að mynda spilliefni
+útfrá inntakinu. Prenta skal hverja leið á sína eigin línu.
+Raða skal línum úttaksins eftir ASCII-gildi (þetta er
+venjulega leiðin sem strengjum er raðað í flestum
+forritunarmálum).
+Gefið er að úttakið verði mest með $10^6$ stafir.

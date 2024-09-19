@@ -1,0 +1,43 @@
+\problemname{Bjagað Beðaltal}
+\illustration{0.5}{2435}{Image by Randall Munroe, \href{https://xkcd.com/2435/}{xkcd.com}}
+
+At the end of every programming contest, statistics and fun
+facts are collected to show the contestants afterwards.
+Often average number of solves, or average number of tries
+to solve a given problem are calculated.
+Allegedly, someone at the statistics department said
+that arithmetic averages are very uninteresting.
+To make the contest data analysis exciting enough for
+the statisticians the contest hosts have decided to use
+a new exciting method to calculate averages.
+Instead of following the good example set by Hölder in
+how to generalise averages, the example of Randall Munroe
+is followed instead.
+That is where the geothmetic meandian comes in.
+As the image shows, the geothmetic meandian is calculated
+in the following way:
+
+Let $n$ be an odd number.
+A sequence of numbers $x_1, x_2, \dots, x_n$ is sorted resulting in the sequence $y_1, y_2, \dots, y_n$.
+The original sequence is then replaced by the
+sequence 
+\[
+    n^{-1}\sum_{i = 1}^n y_i, \sqrt[n]{\prod_{i=1}^n y_i}, y_{(n+1)/2}
+\]
+This is then repeated on the new sequence resulting in another sequence.
+If the repetition is performed infinitely often the sequence converges to a single repeated value, this
+repeated value is then the geothmetic meandian.
+
+\section*{Input}
+
+The input begins with a single odd integer 
+$1 \leq n \leq 10^5$. 
+The next line contains $n$ real values $x_1, \dots, x_n$.
+For all $i$ it is guaranteed that $0 < x_i \leq 10^9$.
+All real values have at most $6$ digits after the decimal.
+
+\section*{Output}
+
+Print the geothmetic meandian of $x_1, \dots, x_n$.
+The answer is considered correct if its absolute or relative
+error from the true answer is at most $10^{-5}$.

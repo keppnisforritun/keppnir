@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+compile fixed_generator.py
+
+sample 1
+sample 2
+
+tc edge-1 fixed_generator 1
+tc edge-2 fixed_generator 2
+tc edge-3 fixed_generator 3
+tc edge-4 fixed_generator 7
+tc edge-5 fixed_generator 9
+tc edge-6 fixed_generator 10
+tc edge-7 fixed_generator 11
+tc edge-8 fixed_generator 500500
+tc edge-9 fixed_generator 10000000000
+tc edge-A fixed_generator 9999878909
+tc edge-B fixed_generator 9999878910
+
+for i in {01..25}; do
+    tc small-rand-$i random_generator 1 1000
+    tc medium-rand-$i random_generator 1001 100000
+done;
+
+for i in {01..05}; do
+    tc big-rand-$i random_generator 100001 10000000000
+done;

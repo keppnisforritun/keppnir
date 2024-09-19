@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+
+sample 1
+sample 2
+sample 3
+
+for i in {00..16}; do
+    tc max-$i random_generator max $i
+done;
+
+tc trans-3 random_generator manual 3 "012"
+tc trans-7 random_generator manual 7 "0123456"
+tc trans-12 random_generator manual 12 "0123456789AB"
+tc trans-16 random_generator manual 16 "0123456789ABCDEF"
+
+tc edge-1 random_generator manual 1 "1"
+tc edge-2 random_generator manual 1 "F"
+tc wrong-sum-1 random_generator manual 4 "0122"
+tc wrong-sum-2 random_generator manual 16 "6777777788888888"
+
+for i in {01..20}; do
+    tc random-$i random_generator random
+    tc fail-$i random_generator fail
+done;

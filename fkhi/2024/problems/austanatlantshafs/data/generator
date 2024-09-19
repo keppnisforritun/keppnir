@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_SCORING=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+
+sample 1
+
+tc trivial random_generator 1 1 tower
+
+for i in {01..10}; do
+    tc lown-lowx-rand-$i random_generator 10**3 10**2 random
+    tc lown-medx-rand-$i random_generator 10**3 10**4 random
+    tc lown-hghx-rand-$i random_generator 10**3 10**9 random
+done;
+
+tc big-tower random_generator 10**5 10**9 tower
+tc big-bst random_generator 10**5 10**9 bst
+tc big-slantbst random_generator 10**5 10**9 slantbst
+tc big-mixbst random_generator 10**5 10**9 mixbst
+tc big-flat random_generator 10**5 10**9 flat
+tc big-sqrt random_generator 10**5 10**9 sqrt
+tc big-log random_generator 10**5 10**9 log

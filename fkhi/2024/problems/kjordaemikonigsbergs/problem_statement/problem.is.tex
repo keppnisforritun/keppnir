@@ -1,0 +1,36 @@
+\problemname{Kjördæmi Königsbergs}
+\illustration{0.5}{2694}{Mynd eftir Randall Munroe, \href{https://xkcd.com/2694/}{xkcd.com}}
+
+Königsberg, núna þekkt sem Kalíníngrad, er borg sem er fræg fyrir brýr sínar.
+Núna á að byggja brýr milli kjördæmi borganna til að hægt sé að komast um alla borgina.
+Hver brú tengir tvö kjördæmi borgarinnar.
+
+Að byggja brýr getur verið dýrt og hver brú gagnast helst íbúum þeirra tveggja kjördæma borgarinnar sem brúin tengir.
+Því er hver brú byggð frá báðum endum og hvort kjördæmi byggir hálfa brú.
+Fjármagnið fyrir hvern brúarhelming kemur frá því kjördæmi sem byggir hann.
+Því miður er ójöfnuður í borginni og eiga ekki öll kjördæmi jafn mikið fjármagn til að verja í brýrnar.
+Athugaðu að vegna mikilfenglegs skriffinnskuræði að þá verður að verja öllu fjármagninu og því þarf að byggja nákvæmlega þann fjölda brúa frá hverju kjördæmi sem er fjármagn fyrir.
+
+Það skiptir ekki máli hvert brýrnar leiða einar og sér, en að lokum á að vera hægt að ferðast um alla borgina með því að nota brýrnar.
+Það má hins vegar ekki eyða fjármagni í að byggja tvær brýr milli sömu tveggja kjördæma borgarinnar.
+Það má ekki heldur eyða pening í brú sem tengir kjördæmi borgar við sjálft sig.
+Það getur því reynst flókið að tengja kjördæmin þannig að allar brýr séu fullbyggðar.
+
+Er hægt að byggja brýrnar þannig að öll skilyrði séu uppfyllt?
+Ef svo er, hvernig má gera það?
+
+\section*{Inntak}
+Inntak er tvær línur.
+Fyrri línan inniheldur eina heiltölu $n$, fjölda kjördæma borgarinnar, þar sem $1 \leq n \leq 100\,000$.
+Seinni línan samanstendur af $n$ ekki neikvæðum heiltölum $d_1, \dotsc, d_n$ aðskildum með bili,
+þar sem $d_i$ táknar fjölda brúarhelminga sem kjördæmi $i$ á efni á að byggja.
+Það gildir ávallt að samtals fjöldi brúa sé mesta lagi $1\,000\,000$.
+
+\section*{Úttak}
+Ef ekki er hægt að byggja brýrnar til að uppfylla skilyrðin skaltu skrifa \texttt{"Omogulegt!"}.
+
+Annars skaltu fyrst skrifa tvær heiltölur aðskildar með bili, $n$ og $m$ þar sem $n$ er fjöldi kjördæma borgarinnar og $m$ er samtals fjöldi brúa.
+Næst skaltu skrifa út $m$ línur, þar sem $i$-ta þeirra inniheldur tvær heiltölur aðskildar með bili, $a_i$ og $b_i$, sem táknar að það skal byggja brú milli kjördæma $a_i$ og hluta $b_i$.
+Hvert par af $a_i$ og $b_i$ þarf að vera einstakt og verður að uppfylla $a_i \neq b_i$, $1 \leq a_i \leq n$ og $1 \leq b_i \leq n$.
+
+Athugaðu að úttakið getur verið \textbf{mjög mikið}, þannig mælt er með að nota hraðar aðferðir fyrir inntak og úttak.

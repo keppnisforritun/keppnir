@@ -1,0 +1,37 @@
+\problemname{Kjördæmi Königsbergs}
+\illustration{0.5}{2694}{Image by Randall Munroe, \href{https://xkcd.com/2694/}{xkcd.com}}
+
+Königsberg, now known as Kaliningrad, is a city well known for its bridges.
+Now bridges are to be built between the districts of the city to ensure travels around the city are possible.
+Each bridge connects two districts of the city.
+
+Building the bridges can be expensive and each bridge only immediately benefits the citizens of the two districts which the bridge connects.
+Therefore, the funding for each half of a bridge comes from the two districts that build each half.
+Sadly, inequality is prevalent in the city and not all districts have equal funding to spend on the bridges.
+Note also that due to immense bureaucracy, all of the funding must be spent and therefore the exact number of bridges the funding covers must be built.
+
+It is not important where each bridge leads to on its own.
+However, after all bridges have been built it should be possible to travel by them around the entire city.
+It is forbidden though to spend funds on two bridges which connect the same two districts.
+It is also forbidden to spend funds on a bridge that connects a district to itself.
+It can therefore prove difficult to connect the districts such that all bridges are built.
+
+Can all the bridges be built such that the requirements are fulfilled?
+If so, how should it be done?
+
+\section*{Input}
+Input consists of two lines.
+
+The first line contains a single integer $n$, the number of districts in the city, where $1 \leq n \leq 100\,000$.
+The second line consists of $n$ non-negative integers $d_1, \dotsc, d_n$, separated by spaces,
+where $d_i$ represents the number of halves of bridges that district $i$ can afford to build.
+It is guaranteed that the total number of bridges is at most $1\,000\,000$.
+
+\section*{Output}
+If the bridges cannot be built such that the requirements are satisfied you should output \texttt{"Omogulegt!"}.
+
+Otherwise, you should first output a line consisting of two space separated integers $n$ and $m$, where $n$ is the number of districts and $m$ is the total number of bridges.
+Then output $m$ lines, the $i$-th of which consists of two space separated integers, $a_i$ and $b_i$, denoting that a bridge should be built between districts $a_i$ and $b_i$.
+Each pair of $a_i$ and $b_i$ must be distinct and must satisfy $a_i \neq b_i$, $1 \leq a_i \leq n$ and $1 \leq b_i \leq n$.
+
+Note, the output can be \textbf{very large}, so it is advisable to use fast input and output methods.

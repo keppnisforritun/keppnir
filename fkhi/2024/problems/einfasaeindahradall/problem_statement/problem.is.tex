@@ -1,0 +1,77 @@
+\problemname{Einfasa Eindahraðall}
+\illustration{0.5}{1862}{Mynd eftir Randall Munroe, \href{https://xkcd.com/1862/}{xkcd.com}}
+
+Eins og kom fram í síðustu keppni er búið að setja upp
+íslenskan eindahraðal. Frá því síðast er einhver búinn að
+taka það að sér að koma honum yfir á einfasa rafmagn, því
+hinir fasarnir voru að trufla mælingar samkvæmt einhverjum
+rafverkfræðingi. Álpappírshatturinn var undarlegur, en tækið
+virkar alla vega. Nú þarf bara að vinna úr gögnunum sem
+eindahraðallinn spýtti út.
+
+Eindahraðallinn, eins og nafnið gefur til kynna, hraðar
+eindum. Þetta er gert til að skella saman eindum með miklum
+krafti til að mynda og greina nýjar og sjaldgæfar eindir.
+Þessum eindum er lýst út frá ýmsum skammtafræðilegum
+eiginleikum, eins og sjá má á myndinni. 
+
+Með því að endurskala hluti rétt má ráðstafa hlutum sem svo
+að öllum þessum skammtafræðilegum eiginleikum megi lýsa með
+heiltölum, þar sem hver eiginleiki hefur eitthvað
+lágmarks- og hámarksgildi og getur tekið sérhvert gildi
+þar á milli.
+
+Eindahraðallinn spýtir út þessum skammtafræðilegu gildum
+fyrir sérhverja eind sem hún mælir. Saman gefa öll þessi
+gildi gerð eindarinnar, sem er þá runa heiltalna, sem 
+ákvarða eindina ótvírætt. En þar eðlisfræðingarnir
+eru að leita að tiltekinni eind sem strengjafræði þeirra
+spáir fyrir um þarf að vinna úr gögnunum aðeins.
+
+Fyrir hverja tilgátu sem eðlisfræðingarnir hafa vilja þeir
+vita hversu margar eindir mældust sem hafa sérhvern
+skammtafræðilegan eiginleika innan viss bils. Til dæmis
+ef lýsa mætti eindum út frá hleðslu, massa og keim gætu
+eðlisfræðingarnir beðið um fjölda einda með hleðslu
+nákvæmlega $-3$, massa frá $2$ til $5$ og keim frá $-1$
+til $1$. Ein gerð einda sem passar við þetta væri þá
+til dæmis $(-3, 4, 0)$.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur jákvæða heiltölu $n$,
+fjöldi skammtafræðilegra eiginleika sem eindahraðallinn
+mælir. Gefið er að $1 \leq n \leq 10$.
+Næst fylgir lína með $n$ pörum heiltalna $l_i, r_i$ þar sem
+$l_i$ gefur lágmarksgildi og $r_i$ hámarksgildi
+$i$-ta skammtafræðilega eiginleikans. Gildin eru gefin í
+röðinni $l_1, r_1, l_2, r_2$ og svo framvegis, aðskilin
+með bili. Gefið er að $-10^9 \leq l_i \leq r_i \leq 10^9$ 
+fyrir öll $i$ og að eindirnar geti haft mest $10^6$ ólíkar
+gerðir í heildina.
+Næst fylgir lína með einni jákvæðri heiltölu $p$, fjöldi
+einda sem eindahraðallinn mældi. Gefið er að
+$1 \leq p \leq 10^5$.
+Næst fylgja $p$ línur þar sem $i$-ta línan lýsir $i$-tu
+eindinni sem eindahraðallinn mældi.
+Á $i$-tu línu eru $n$ gildi $x_j$ þar sem $x_j$ lýsir
+$j$-ta skammtafræðilega eiginleika $i$-tu eindarinnar sem
+uppfyllir $l_j \leq x_j \leq r_j$, þ.e. $i$-ta línan
+gefur gerð $i$-tu eindarinnar.
+Næst kemur ein lína með jákvæðri heiltölu $q$, fjöldi
+fyrirspurna frá eðlisfræðingunum. Gefið er að
+$1 \leq q \leq 10^5$.
+Loks koma $q$ línur til viðbótar, þar sem $i$-ta þeirra
+lýsir $i$-tu fyrirspurn eðlisfræðinganna.
+Á $i$-tu línu eru $n$ pör heiltalna $a_j, b_j$ þar sem
+$a_j$ gefur lágmarksgildi og $b_j$ hámarksgildi
+$j$-ta skammtafræðilega eiginleikans. Gildin eru gefin í
+röðinni $a_1, b_1, a_2, b_2$ og svo framvegis, aðskilin
+með bili. Gefið er að $-10^9 \leq a_j \leq b_j \leq 10^9$
+fyrir öll $j$.
+
+\section*{Úttak}
+Fyrir hverja fyrirspurn eðlisfræðinganna skal prenta eina
+heiltölu á sinni eigin línu, fjölda einda í inntaki sem
+hafa sérhvern skammtafræðilegan eiginleika innan marka
+fyrirspurnarinnar. Prenta skal svörin í sömu röð og
+fyrirspurnirnar eru gefnar.

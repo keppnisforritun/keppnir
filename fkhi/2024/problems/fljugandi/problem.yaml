@@ -1,0 +1,9 @@
+name: Fljúgandi Furðuhlutir Forðast Fókus
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín
+source: Forritunarkeppni Háskólanna á Íslandi 2024
+rights_owner: Keppnisforritunarfélag Íslands
+license: cc by-sa
+uuid: "8b0c0e37-7e95-46d0-a195-2fb9d8ea110f"
+limits:
+    time_multiplier: 1.25
+keywords: geometry union-find convex_hull 2d 3d delaunay weighted_delaunay power_diagram binary_search

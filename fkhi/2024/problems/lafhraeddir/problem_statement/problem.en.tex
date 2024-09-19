@@ -1,0 +1,53 @@
+\problemname{Lafhræddir Læknar}
+\illustration{0.5}{2161}{Image by Randall Munroe, \href{https://xkcd.com/2161/}{xkcd.com}}
+
+As the new hospital grows ever closer to finishing
+construction the doctors get ever bolder. They have been
+spotted past Gamla Hringbraut and even in the wetlands near
+the airport. This worries both the University of Iceland
+and University of Reykjavík. Clearly these doctors need to
+be kept in check.
+
+Luckily, as is well known, doctors can be kept at bay using
+apples. More specifically keeping them at bay requires one
+apple per doctor per day. Before this kind of issue could
+be solved greedily, each doctor was given the weakest apple
+that would still keep them at bay, and that was repeated for
+each doctor each day. But now some doctors have developed
+apple resistances which complicates matters quite a bit.
+
+Given the apple resistances of the doctors and the apple
+stash of the universities, can you find out for how many
+days the doctors can be kept in check?
+
+\section*{Input}
+The first line of input contains two positive integers,
+$L$ which gives the number of types of doctors and $E$
+which gives the number of types of apples.
+You may assume that $1 \leq L, E \leq 500$.
+The next $E$ lines describe the types of apples.
+Each line contains the name of the type, the strength
+of the type and finally how many of that type the
+universities have stashed away.
+The strength is a positive integer less than or equal to $10^9$.
+The universities also have a positive integer number of apples
+stashed away of each type, and at most $10^9$ of any type.
+Finally there are $L$ lines describing the types of doctors.
+Each line contains the name of the type of doctor,
+the strength of the type, the number of doctors of that type,
+how many apple types that type is resistant to and finally
+the names of those apple types.
+As with the apples the strength and number are both positive
+integers less than or equal equal to $10^9$.
+Each type of doctor is resistant to at most $20$ types
+of apples.
+All names in the input are strings containing only lower
+case ASCII characters with no spaces. All names are at most
+$20$ characters in length. All names are unique.
+
+\section*{Output}
+Print the number of days the doctors can be held at bay.
+That is to say if each doctor can be given $d$ apples
+with a strength which is not lower than the doctor's strength
+and the doctor is not immune to, but the same is not true for
+$d + 1$, print $d$.

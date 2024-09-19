@@ -1,0 +1,36 @@
+\problemname{Glötuð Gildi}
+\illustration{0.5}{544}{Mynd eftir Randall Munroe, \href{https://xkcd.com/544/}{xkcd.com}}
+
+Háskólar Íslands hafa ákveðið að halda stórt Nim-mót.
+Það hafa $n$ lið skráð sig, og mun hvert lið keppa við
+sérhvert annað lið nákvæmlega einu sinni.
+Eins og er vel þekkt eru engin jafntefli í Nim, svo
+í hverjum leik sigrar annað liðið og það fær $1$ stig.
+Í lokin er búið að safna saman stigum liðanna, en það
+gleymdist að halda utan um hver sigraði hvern.
+Þetta er ekki gott, svo Jörmunrekur ætlar að reyna giska
+á hverjar niðurstöðurnar voru.
+Líkurnar á að hann hafi rétt fyrir sér eru þá háðar á
+hversu marga vegu þessi stigatafla hefði getað myndast.
+Því þarf að komast að því sem fyrst!
+
+Tökum sem dæmi mót með lið $A, B, C$ og stigatöflu $1, 1, 1$.
+Það gæti verið að $A$ vann $B$, $B$ vann $C$ og $C$ vann $A$.
+En það kemur einnig til greina að $A$ vann $C$, $C$ vann $B$
+og $B$ vann $A$.
+Sjá má að þetta eru möguleikarnir, svo í þessu tilfelli
+væri svarið $2$.
+
+\section*{Inntak}
+
+Inntakið byrjar á einni heiltölu $0 \leq n \leq 16$.
+Svo fylgja $n$ heiltölur á næstu línu, sérhver þeirra
+er einnig minnst $0$ og mest $16$.
+Heiltala númer $i$ táknar hversu marga leiki
+$i$-ta liðið vann.
+
+\section*{Úttak}
+
+Prentið á hversu marga vegu mótið gæti hafa farið.
+Tvær leiðir teljast ólíkar ef eitthvert lið vann annað
+í annarri leiðinni, en ekki í hinni.
